@@ -1,0 +1,35 @@
+-muwx
+-i SimpleBLEPeripheral_Main.ihx
+-M
+-Y
+-S 0x21
+-b HOME = 0x0000
+-b DSEG = 0x0010
+-b XSEG = 0x0300
+-b PSEG = 0x0300
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k /usr/local/bin/../share/sdcc/lib/large
+-k /usr/local/share/sdcc/lib/large
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+SimpleBLEPeripheral_Main.rel
+OSAL.rel
+simpleBLEPeripheral.rel
+OSAL_Memory.rel
+OSAL_Timers.rel
+OSAL_SimpleBLEPeripheral.rel
+OSAL_ClockBLE.rel
+epl_uart.rel
+task1.rel
+task2.rel
+gatt_uuid.rel
+peripheral.rel
+BXprof.rel
+gattservapp.rel
+BX_ACC.rel
+
+-e

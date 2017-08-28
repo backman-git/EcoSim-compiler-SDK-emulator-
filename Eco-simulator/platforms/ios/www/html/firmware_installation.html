@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoSim </title>
+    <link rel="stylesheet" href="../themes/EcoSim.min.css">
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href=".././system/jquery.mobile.structure-1.4.3.css">
+    <link rel="stylesheet" href="../css/firmware_installation.css">
+    <script src=".././system/js/jquery-1.11.1.js"></script>
+    <script src=".././system/js/jquery.mobile-1.4.3.js"></script>
+    <script src="../cordova.js"></script>
+    <script src="../js/firmware_installation.js"></script>
+  </head>
+  <body>
+    <div data-role="page" data-theme="a" id="EcoBt">
+      <script src="../js/installationInit.js"></script>
+      <div data-role="header" data-theme="a" data-fullscreen="true">
+        <h1>EcoSim</h1>
+      </div>
+      <div data-role="content" data-theme="a">
+        <form>
+          <label>firmware: </label>
+          <input id="firmware" type="text" name="firmware" value="main.hex">
+        </form>
+        <button id="download" onclick="downloadFirmware()" class="ui-btn"></button><a id="flash" href="./EcoBt.html" data-transition="flip" class="ui-btn"></a>
+        <button id="connection" onclick="connectPeripheral()" class="ui-btn"></button>
+      </div>
+    </div>
+  </body>
+</html>

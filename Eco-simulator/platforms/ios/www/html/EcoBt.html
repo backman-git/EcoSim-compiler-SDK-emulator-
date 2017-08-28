@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Module</title>
+    <link rel="stylesheet" href="../themes/EcoSim.min.css">
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href=".././system/jquery.mobile.structure-1.4.3.css">
+    <link rel="stylesheet" href="../css/EcoBt.css">
+  </head>
+  <body>
+    <div data-role="page" data-theme="a">
+      <script src="../js/EcoBt.js"></script>
+      <script src="../js/EcoBtInit.js"></script>
+      <div data-role="header" data-theme="a" data-fullscreen="true">
+        <h1>EcoBTSuper</h1><a herf="#" class="ui-btn-left">Options</a>
+        <div data-role="navbar">
+          <ul>
+            <li><a onclick="resume()">Resume</a></li>
+            <li><a onclick="pause()">Pause</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="content" data-theme="a">
+        <div class="canvas"><img class="module">
+          <div id="yLED" class="yelloLED"></div>
+          <div id="gLED" class="greenLED"></div>
+          <div id="rLED" class="redLED"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

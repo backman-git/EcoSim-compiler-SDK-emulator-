@@ -1,0 +1,1236 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 3.4.0 #8981 (Apr  5 2014) (Mac OS X i386)
+                                      4 ; This file was generated Fri Jul 17 12:02:40 2015
+                                      5 ;--------------------------------------------------------
+                                      6 	.module simpleBLEPeripheral
+                                      7 	.optsdcc -mmcs51 --model-large
+                                      8 	
+                                      9 ;--------------------------------------------------------
+                                     10 ; Public variables in this module
+                                     11 ;--------------------------------------------------------
+                                     12 	.globl _BX_AddService
+                                     13 	.globl _GAPRole_StartDevice
+                                     14 	.globl _GAPRole_SetParameter
+                                     15 	.globl _osal_set_event
+                                     16 	.globl _osal_start_timerEx
+                                     17 	.globl _MODE
+                                     18 	.globl _RE
+                                     19 	.globl _SLAVE
+                                     20 	.globl _FE
+                                     21 	.globl _ERR
+                                     22 	.globl _RX_BYTE
+                                     23 	.globl _TX_BYTE
+                                     24 	.globl _ACTIVE
+                                     25 	.globl _B_7
+                                     26 	.globl _B_6
+                                     27 	.globl _B_5
+                                     28 	.globl _B_4
+                                     29 	.globl _B_3
+                                     30 	.globl _B_2
+                                     31 	.globl _B_1
+                                     32 	.globl _B_0
+                                     33 	.globl _WDTIF
+                                     34 	.globl _P1IF
+                                     35 	.globl _UTX1IF
+                                     36 	.globl _UTX0IF
+                                     37 	.globl _P2IF
+                                     38 	.globl _ACC_7
+                                     39 	.globl _ACC_6
+                                     40 	.globl _ACC_5
+                                     41 	.globl _ACC_4
+                                     42 	.globl _ACC_3
+                                     43 	.globl _ACC_2
+                                     44 	.globl _ACC_1
+                                     45 	.globl _ACC_0
+                                     46 	.globl _OVFIM
+                                     47 	.globl _T4CH1IF
+                                     48 	.globl _T4CH0IF
+                                     49 	.globl _T4OVFIF
+                                     50 	.globl _T3CH1IF
+                                     51 	.globl _T3CH0IF
+                                     52 	.globl _T3OVFIF
+                                     53 	.globl _CY
+                                     54 	.globl _AC
+                                     55 	.globl _F0
+                                     56 	.globl _RS1
+                                     57 	.globl _RS0
+                                     58 	.globl _OV
+                                     59 	.globl _F1
+                                     60 	.globl _P
+                                     61 	.globl _STIF
+                                     62 	.globl _P0IF
+                                     63 	.globl _T4IF
+                                     64 	.globl _T3IF
+                                     65 	.globl _T2IF
+                                     66 	.globl _T1IF
+                                     67 	.globl _DMAIF
+                                     68 	.globl _P0IE
+                                     69 	.globl _T4IE
+                                     70 	.globl _T3IE
+                                     71 	.globl _T2IE
+                                     72 	.globl _T1IE
+                                     73 	.globl _DMAIE
+                                     74 	.globl _EA
+                                     75 	.globl _STIE
+                                     76 	.globl _ENCIE
+                                     77 	.globl _URX1IE
+                                     78 	.globl _URX0IE
+                                     79 	.globl _ADCIE
+                                     80 	.globl _RFERRIE
+                                     81 	.globl _P2_7
+                                     82 	.globl _P2_6
+                                     83 	.globl _P2_5
+                                     84 	.globl _P2_4
+                                     85 	.globl _P2_3
+                                     86 	.globl _P2_2
+                                     87 	.globl _P2_1
+                                     88 	.globl _P2_0
+                                     89 	.globl _ENCIF_1
+                                     90 	.globl _ENCIF_0
+                                     91 	.globl _P1_7
+                                     92 	.globl _P1_6
+                                     93 	.globl _P1_5
+                                     94 	.globl _P1_4
+                                     95 	.globl _P1_3
+                                     96 	.globl _P1_2
+                                     97 	.globl _P1_1
+                                     98 	.globl _P1_0
+                                     99 	.globl _URX1IF
+                                    100 	.globl _ADCIF
+                                    101 	.globl _URX0IF
+                                    102 	.globl _IT1
+                                    103 	.globl _RFERRIF
+                                    104 	.globl _IT0
+                                    105 	.globl _P0_7
+                                    106 	.globl _P0_6
+                                    107 	.globl _P0_5
+                                    108 	.globl _P0_4
+                                    109 	.globl _P0_3
+                                    110 	.globl _P0_2
+                                    111 	.globl _P0_1
+                                    112 	.globl _P0_0
+                                    113 	.globl _P2DIR
+                                    114 	.globl _P1DIR
+                                    115 	.globl _P0DIR
+                                    116 	.globl _U1GCR
+                                    117 	.globl _U1UCR
+                                    118 	.globl _U1BAUD
+                                    119 	.globl _U1DBUF
+                                    120 	.globl _U1CSR
+                                    121 	.globl _P2INP
+                                    122 	.globl _P1INP
+                                    123 	.globl _P2SEL
+                                    124 	.globl _P1SEL
+                                    125 	.globl _P0SEL
+                                    126 	.globl _APCFG
+                                    127 	.globl _PERCFG
+                                    128 	.globl _B
+                                    129 	.globl _T4CC1
+                                    130 	.globl _T4CCTL1
+                                    131 	.globl _T4CC0
+                                    132 	.globl _T4CCTL0
+                                    133 	.globl _T4CTL
+                                    134 	.globl _T4CNT
+                                    135 	.globl _RFIRQF0
+                                    136 	.globl _IRCON2
+                                    137 	.globl _T1CCTL2
+                                    138 	.globl _T1CCTL1
+                                    139 	.globl _T1CCTL0
+                                    140 	.globl _T1CTL
+                                    141 	.globl _T1CNTH
+                                    142 	.globl _T1CNTL
+                                    143 	.globl _RFST
+                                    144 	.globl _ACC
+                                    145 	.globl _T1CC2H
+                                    146 	.globl _T1CC2L
+                                    147 	.globl _T1CC1H
+                                    148 	.globl _T1CC1L
+                                    149 	.globl _T1CC0H
+                                    150 	.globl _T1CC0L
+                                    151 	.globl _RFD
+                                    152 	.globl _TIMIF
+                                    153 	.globl _DMAREQ
+                                    154 	.globl _DMAARM
+                                    155 	.globl _DMA0CFGH
+                                    156 	.globl _DMA0CFGL
+                                    157 	.globl _DMA1CFGH
+                                    158 	.globl _DMA1CFGL
+                                    159 	.globl _DMAIRQ
+                                    160 	.globl _PSW
+                                    161 	.globl _T3CC1
+                                    162 	.globl _T3CCTL1
+                                    163 	.globl _T3CC0
+                                    164 	.globl _T3CCTL0
+                                    165 	.globl _T3CTL
+                                    166 	.globl _T3CNT
+                                    167 	.globl _WDCTL
+                                    168 	.globl _MEMCTR
+                                    169 	.globl _CLKCONCMD
+                                    170 	.globl _U0GCR
+                                    171 	.globl _U0UCR
+                                    172 	.globl _T2MSEL
+                                    173 	.globl _U0BAUD
+                                    174 	.globl _U0DBUF
+                                    175 	.globl _IRCON
+                                    176 	.globl _RFERRF
+                                    177 	.globl _SLEEPCMD
+                                    178 	.globl _RNDH
+                                    179 	.globl _RNDL
+                                    180 	.globl _ADCH
+                                    181 	.globl _ADCL
+                                    182 	.globl _IP1
+                                    183 	.globl _IEN1
+                                    184 	.globl _ADCCON3
+                                    185 	.globl _ADCCON2
+                                    186 	.globl _ADCCON1
+                                    187 	.globl _ENCCS
+                                    188 	.globl _ENCDO
+                                    189 	.globl _ENCDI
+                                    190 	.globl _T1STAT
+                                    191 	.globl _PMUX
+                                    192 	.globl _STLOAD
+                                    193 	.globl _P2IEN
+                                    194 	.globl _P0IEN
+                                    195 	.globl _IP0
+                                    196 	.globl _IEN0
+                                    197 	.globl _T2IRQM
+                                    198 	.globl _T2MOVF2
+                                    199 	.globl _T2MOVF1
+                                    200 	.globl _T2MOVF0
+                                    201 	.globl _T2M1
+                                    202 	.globl _T2M0
+                                    203 	.globl _T2IRQF
+                                    204 	.globl _P2
+                                    205 	.globl _FMAP
+                                    206 	.globl _PSBANK
+                                    207 	.globl _CLKCONSTA
+                                    208 	.globl _SLEEPSTA
+                                    209 	.globl _T2EVTCFG
+                                    210 	.globl _S1CON
+                                    211 	.globl _IEN2
+                                    212 	.globl _S0CON
+                                    213 	.globl _ST2
+                                    214 	.globl _ST1
+                                    215 	.globl _ST0
+                                    216 	.globl _T2CTRL
+                                    217 	.globl __XPAGE
+                                    218 	.globl _MPAGE
+                                    219 	.globl _DPS
+                                    220 	.globl _RFIRQF1
+                                    221 	.globl _P1
+                                    222 	.globl _P0INP
+                                    223 	.globl _P1IEN
+                                    224 	.globl _PICTL
+                                    225 	.globl _P2IFG
+                                    226 	.globl _P1IFG
+                                    227 	.globl _P0IFG
+                                    228 	.globl _TCON
+                                    229 	.globl _PCON
+                                    230 	.globl _U0CSR
+                                    231 	.globl _DPH1
+                                    232 	.globl _DPL1
+                                    233 	.globl _DPH0
+                                    234 	.globl _DPL0
+                                    235 	.globl _SP
+                                    236 	.globl _P0
+                                    237 	.globl _TXFILTCFG
+                                    238 	.globl _RFC_OBS_CTRL2
+                                    239 	.globl _RFC_OBS_CTRL1
+                                    240 	.globl _RFC_OBS_CTRL0
+                                    241 	.globl _CSPT
+                                    242 	.globl _CSPZ
+                                    243 	.globl _CSPY
+                                    244 	.globl _CSPX
+                                    245 	.globl _CSPSTAT
+                                    246 	.globl _CSPCTRL
+                                    247 	.globl _CSPPROG23
+                                    248 	.globl _CSPPROG22
+                                    249 	.globl _CSPPROG21
+                                    250 	.globl _CSPPROG20
+                                    251 	.globl _CSPPROG19
+                                    252 	.globl _CSPPROG18
+                                    253 	.globl _CSPPROG17
+                                    254 	.globl _CSPPROG16
+                                    255 	.globl _CSPPROG15
+                                    256 	.globl _CSPPROG14
+                                    257 	.globl _CSPPROG13
+                                    258 	.globl _CSPPROG12
+                                    259 	.globl _CSPPROG11
+                                    260 	.globl _CSPPROG10
+                                    261 	.globl _CSPPROG9
+                                    262 	.globl _CSPPROG8
+                                    263 	.globl _CSPPROG7
+                                    264 	.globl _CSPPROG6
+                                    265 	.globl _CSPPROG5
+                                    266 	.globl _CSPPROG4
+                                    267 	.globl _CSPPROG3
+                                    268 	.globl _CSPPROG2
+                                    269 	.globl _CSPPROG1
+                                    270 	.globl _CSPPROG0
+                                    271 	.globl _PTEST1
+                                    272 	.globl _PTEST0
+                                    273 	.globl _ATEST
+                                    274 	.globl _DACTEST2
+                                    275 	.globl _DACTEST1
+                                    276 	.globl _DACTEST0
+                                    277 	.globl _MDMTEST1
+                                    278 	.globl _MDMTEST0
+                                    279 	.globl _ADCTEST2
+                                    280 	.globl _ADCTEST1
+                                    281 	.globl _ADCTEST0
+                                    282 	.globl _AGCCTRL3
+                                    283 	.globl _AGCCTRL2
+                                    284 	.globl _AGCCTRL1
+                                    285 	.globl _AGCCTRL0
+                                    286 	.globl _FSCAL3
+                                    287 	.globl _FSCAL2
+                                    288 	.globl _FSCAL1
+                                    289 	.globl _FSCTRL
+                                    290 	.globl _RXCTRL
+                                    291 	.globl _FREQEST
+                                    292 	.globl _MDMCTRL1
+                                    293 	.globl _MDMCTRL0
+                                    294 	.globl _RFRND
+                                    295 	.globl _OPAMPMC
+                                    296 	.globl _RFERRM
+                                    297 	.globl _RFIRQM1
+                                    298 	.globl _RFIRQM0
+                                    299 	.globl _TXLAST_PTR
+                                    300 	.globl _TXFIRST_PTR
+                                    301 	.globl _RXP1_PTR
+                                    302 	.globl _RXLAST_PTR
+                                    303 	.globl _RXFIRST_PTR
+                                    304 	.globl _TXFIFOCNT
+                                    305 	.globl _RXFIFOCNT
+                                    306 	.globl _RXFIRST
+                                    307 	.globl _RSSISTAT
+                                    308 	.globl _RSSI
+                                    309 	.globl _CCACTRL1
+                                    310 	.globl _CCACTRL0
+                                    311 	.globl _FSMCTRL
+                                    312 	.globl _FIFOPCTRL
+                                    313 	.globl _FSMSTAT1
+                                    314 	.globl _FSMSTAT0
+                                    315 	.globl _TXCTRL
+                                    316 	.globl _TXPOWER
+                                    317 	.globl _FREQCTRL
+                                    318 	.globl _FREQTUNE
+                                    319 	.globl _RXMASKCLR
+                                    320 	.globl _RXMASKSET
+                                    321 	.globl _RXENABLE
+                                    322 	.globl _FRMCTRL1
+                                    323 	.globl _FRMCTRL0
+                                    324 	.globl _SRCEXTEN2
+                                    325 	.globl _SRCEXTEN1
+                                    326 	.globl _SRCEXTEN0
+                                    327 	.globl _SRCSHORTEN2
+                                    328 	.globl _SRCSHORTEN1
+                                    329 	.globl _SRCSHORTEN0
+                                    330 	.globl _SRCMATCH
+                                    331 	.globl _FRMFILT1
+                                    332 	.globl _FRMFILT0
+                                    333 	.globl _IEEE_ADDR
+                                    334 	.globl _PANIDL
+                                    335 	.globl _PANIDH
+                                    336 	.globl _SHORTADDRL
+                                    337 	.globl _SHORTADDRH
+                                    338 	.globl _USBF5
+                                    339 	.globl _USBF4
+                                    340 	.globl _USBF3
+                                    341 	.globl _USBF2
+                                    342 	.globl _USBF1
+                                    343 	.globl _USBF0
+                                    344 	.globl _USBCNTH
+                                    345 	.globl _USBCNTL
+                                    346 	.globl _USBCNT0
+                                    347 	.globl _USBCSOH
+                                    348 	.globl _USBCSOL
+                                    349 	.globl _USBMAXO
+                                    350 	.globl _USBCSIH
+                                    351 	.globl _USBCSIL
+                                    352 	.globl _USBCS0
+                                    353 	.globl _USBMAXI
+                                    354 	.globl _USBCTRL
+                                    355 	.globl _USBINDEX
+                                    356 	.globl _USBFRMH
+                                    357 	.globl _USBFRML
+                                    358 	.globl _USBCIE
+                                    359 	.globl _USBOIE
+                                    360 	.globl _USBIIE
+                                    361 	.globl _USBCIF
+                                    362 	.globl _USBOIF
+                                    363 	.globl _USBIIF
+                                    364 	.globl _USBPOW
+                                    365 	.globl _USBADDR
+                                    366 	.globl _CMPCTL
+                                    367 	.globl _OPAMPS
+                                    368 	.globl _OPAMPC
+                                    369 	.globl _STCV2
+                                    370 	.globl _STCV1
+                                    371 	.globl _STCV0
+                                    372 	.globl _STCS
+                                    373 	.globl _STCC
+                                    374 	.globl _T1CC4H
+                                    375 	.globl _T1CC4L
+                                    376 	.globl _T1CC3H
+                                    377 	.globl _T1CC3L
+                                    378 	.globl _X_T1CC2H
+                                    379 	.globl _X_T1CC2L
+                                    380 	.globl _X_T1CC1H
+                                    381 	.globl _X_T1CC1L
+                                    382 	.globl _X_T1CC0H
+                                    383 	.globl _X_T1CC0L
+                                    384 	.globl _T1CCTL4
+                                    385 	.globl _T1CCTL3
+                                    386 	.globl _X_T1CCTL2
+                                    387 	.globl _X_T1CCTL1
+                                    388 	.globl _X_T1CCTL0
+                                    389 	.globl _CLD
+                                    390 	.globl _IRCTL
+                                    391 	.globl _CHIPINFO1
+                                    392 	.globl _CHIPINFO0
+                                    393 	.globl _FWDATA
+                                    394 	.globl _FADDRH
+                                    395 	.globl _FADDRL
+                                    396 	.globl _FCTL
+                                    397 	.globl _IVCTRL
+                                    398 	.globl _BATTMON
+                                    399 	.globl _SRCRC
+                                    400 	.globl _DBGDATA
+                                    401 	.globl _TESTREG0
+                                    402 	.globl _CHIPID
+                                    403 	.globl _CHVER
+                                    404 	.globl _OBSSEL5
+                                    405 	.globl _OBSSEL4
+                                    406 	.globl _OBSSEL3
+                                    407 	.globl _OBSSEL2
+                                    408 	.globl _OBSSEL1
+                                    409 	.globl _OBSSEL0
+                                    410 	.globl _I2CIO
+                                    411 	.globl _I2CWC
+                                    412 	.globl _I2CADDR
+                                    413 	.globl _I2CDATA
+                                    414 	.globl _I2CSTAT
+                                    415 	.globl _I2CCFG
+                                    416 	.globl _SimpleBLEPeripheral_Init
+                                    417 	.globl _SimpleBLEPeripheral_ProcessEvent
+                                    418 ;--------------------------------------------------------
+                                    419 ; special function registers
+                                    420 ;--------------------------------------------------------
+                                    421 	.area RSEG    (ABS,DATA)
+      000000                        422 	.org 0x0000
+                           000080   423 _P0	=	0x0080
+                           000081   424 _SP	=	0x0081
+                           000082   425 _DPL0	=	0x0082
+                           000083   426 _DPH0	=	0x0083
+                           000084   427 _DPL1	=	0x0084
+                           000085   428 _DPH1	=	0x0085
+                           000086   429 _U0CSR	=	0x0086
+                           000087   430 _PCON	=	0x0087
+                           000088   431 _TCON	=	0x0088
+                           000089   432 _P0IFG	=	0x0089
+                           00008A   433 _P1IFG	=	0x008a
+                           00008B   434 _P2IFG	=	0x008b
+                           00008C   435 _PICTL	=	0x008c
+                           00008D   436 _P1IEN	=	0x008d
+                           00008F   437 _P0INP	=	0x008f
+                           000090   438 _P1	=	0x0090
+                           000091   439 _RFIRQF1	=	0x0091
+                           000092   440 _DPS	=	0x0092
+                           000093   441 _MPAGE	=	0x0093
+                           000093   442 __XPAGE	=	0x0093
+                           000094   443 _T2CTRL	=	0x0094
+                           000095   444 _ST0	=	0x0095
+                           000096   445 _ST1	=	0x0096
+                           000097   446 _ST2	=	0x0097
+                           000098   447 _S0CON	=	0x0098
+                           00009A   448 _IEN2	=	0x009a
+                           00009B   449 _S1CON	=	0x009b
+                           00009C   450 _T2EVTCFG	=	0x009c
+                           00009D   451 _SLEEPSTA	=	0x009d
+                           00009E   452 _CLKCONSTA	=	0x009e
+                           00009F   453 _PSBANK	=	0x009f
+                           00009F   454 _FMAP	=	0x009f
+                           0000A0   455 _P2	=	0x00a0
+                           0000A1   456 _T2IRQF	=	0x00a1
+                           0000A2   457 _T2M0	=	0x00a2
+                           0000A3   458 _T2M1	=	0x00a3
+                           0000A4   459 _T2MOVF0	=	0x00a4
+                           0000A5   460 _T2MOVF1	=	0x00a5
+                           0000A6   461 _T2MOVF2	=	0x00a6
+                           0000A7   462 _T2IRQM	=	0x00a7
+                           0000A8   463 _IEN0	=	0x00a8
+                           0000A9   464 _IP0	=	0x00a9
+                           0000AB   465 _P0IEN	=	0x00ab
+                           0000AC   466 _P2IEN	=	0x00ac
+                           0000AD   467 _STLOAD	=	0x00ad
+                           0000AE   468 _PMUX	=	0x00ae
+                           0000AF   469 _T1STAT	=	0x00af
+                           0000B1   470 _ENCDI	=	0x00b1
+                           0000B2   471 _ENCDO	=	0x00b2
+                           0000B3   472 _ENCCS	=	0x00b3
+                           0000B4   473 _ADCCON1	=	0x00b4
+                           0000B5   474 _ADCCON2	=	0x00b5
+                           0000B6   475 _ADCCON3	=	0x00b6
+                           0000B8   476 _IEN1	=	0x00b8
+                           0000B9   477 _IP1	=	0x00b9
+                           0000BA   478 _ADCL	=	0x00ba
+                           0000BB   479 _ADCH	=	0x00bb
+                           0000BC   480 _RNDL	=	0x00bc
+                           0000BD   481 _RNDH	=	0x00bd
+                           0000BE   482 _SLEEPCMD	=	0x00be
+                           0000BF   483 _RFERRF	=	0x00bf
+                           0000C0   484 _IRCON	=	0x00c0
+                           0000C1   485 _U0DBUF	=	0x00c1
+                           0000C2   486 _U0BAUD	=	0x00c2
+                           0000C3   487 _T2MSEL	=	0x00c3
+                           0000C4   488 _U0UCR	=	0x00c4
+                           0000C5   489 _U0GCR	=	0x00c5
+                           0000C6   490 _CLKCONCMD	=	0x00c6
+                           0000C7   491 _MEMCTR	=	0x00c7
+                           0000C9   492 _WDCTL	=	0x00c9
+                           0000CA   493 _T3CNT	=	0x00ca
+                           0000CB   494 _T3CTL	=	0x00cb
+                           0000CC   495 _T3CCTL0	=	0x00cc
+                           0000CD   496 _T3CC0	=	0x00cd
+                           0000CE   497 _T3CCTL1	=	0x00ce
+                           0000CF   498 _T3CC1	=	0x00cf
+                           0000D0   499 _PSW	=	0x00d0
+                           0000D1   500 _DMAIRQ	=	0x00d1
+                           0000D2   501 _DMA1CFGL	=	0x00d2
+                           0000D3   502 _DMA1CFGH	=	0x00d3
+                           0000D4   503 _DMA0CFGL	=	0x00d4
+                           0000D5   504 _DMA0CFGH	=	0x00d5
+                           0000D6   505 _DMAARM	=	0x00d6
+                           0000D7   506 _DMAREQ	=	0x00d7
+                           0000D8   507 _TIMIF	=	0x00d8
+                           0000D9   508 _RFD	=	0x00d9
+                           0000DA   509 _T1CC0L	=	0x00da
+                           0000DB   510 _T1CC0H	=	0x00db
+                           0000DC   511 _T1CC1L	=	0x00dc
+                           0000DD   512 _T1CC1H	=	0x00dd
+                           0000DE   513 _T1CC2L	=	0x00de
+                           0000DF   514 _T1CC2H	=	0x00df
+                           0000E0   515 _ACC	=	0x00e0
+                           0000E1   516 _RFST	=	0x00e1
+                           0000E2   517 _T1CNTL	=	0x00e2
+                           0000E3   518 _T1CNTH	=	0x00e3
+                           0000E4   519 _T1CTL	=	0x00e4
+                           0000E5   520 _T1CCTL0	=	0x00e5
+                           0000E6   521 _T1CCTL1	=	0x00e6
+                           0000E7   522 _T1CCTL2	=	0x00e7
+                           0000E8   523 _IRCON2	=	0x00e8
+                           0000E9   524 _RFIRQF0	=	0x00e9
+                           0000EA   525 _T4CNT	=	0x00ea
+                           0000EB   526 _T4CTL	=	0x00eb
+                           0000EC   527 _T4CCTL0	=	0x00ec
+                           0000ED   528 _T4CC0	=	0x00ed
+                           0000EE   529 _T4CCTL1	=	0x00ee
+                           0000EF   530 _T4CC1	=	0x00ef
+                           0000F0   531 _B	=	0x00f0
+                           0000F1   532 _PERCFG	=	0x00f1
+                           0000F2   533 _APCFG	=	0x00f2
+                           0000F3   534 _P0SEL	=	0x00f3
+                           0000F4   535 _P1SEL	=	0x00f4
+                           0000F5   536 _P2SEL	=	0x00f5
+                           0000F6   537 _P1INP	=	0x00f6
+                           0000F7   538 _P2INP	=	0x00f7
+                           0000F8   539 _U1CSR	=	0x00f8
+                           0000F9   540 _U1DBUF	=	0x00f9
+                           0000FA   541 _U1BAUD	=	0x00fa
+                           0000FB   542 _U1UCR	=	0x00fb
+                           0000FC   543 _U1GCR	=	0x00fc
+                           0000FD   544 _P0DIR	=	0x00fd
+                           0000FE   545 _P1DIR	=	0x00fe
+                           0000FF   546 _P2DIR	=	0x00ff
+                                    547 ;--------------------------------------------------------
+                                    548 ; special function bits
+                                    549 ;--------------------------------------------------------
+                                    550 	.area RSEG    (ABS,DATA)
+      000000                        551 	.org 0x0000
+                           000080   552 _P0_0	=	0x0080
+                           000081   553 _P0_1	=	0x0081
+                           000082   554 _P0_2	=	0x0082
+                           000083   555 _P0_3	=	0x0083
+                           000084   556 _P0_4	=	0x0084
+                           000085   557 _P0_5	=	0x0085
+                           000086   558 _P0_6	=	0x0086
+                           000087   559 _P0_7	=	0x0087
+                           000088   560 _IT0	=	0x0088
+                           000089   561 _RFERRIF	=	0x0089
+                           00008A   562 _IT1	=	0x008a
+                           00008B   563 _URX0IF	=	0x008b
+                           00008D   564 _ADCIF	=	0x008d
+                           00008F   565 _URX1IF	=	0x008f
+                           000090   566 _P1_0	=	0x0090
+                           000091   567 _P1_1	=	0x0091
+                           000092   568 _P1_2	=	0x0092
+                           000093   569 _P1_3	=	0x0093
+                           000094   570 _P1_4	=	0x0094
+                           000095   571 _P1_5	=	0x0095
+                           000096   572 _P1_6	=	0x0096
+                           000097   573 _P1_7	=	0x0097
+                           000098   574 _ENCIF_0	=	0x0098
+                           000099   575 _ENCIF_1	=	0x0099
+                           0000A0   576 _P2_0	=	0x00a0
+                           0000A1   577 _P2_1	=	0x00a1
+                           0000A2   578 _P2_2	=	0x00a2
+                           0000A3   579 _P2_3	=	0x00a3
+                           0000A4   580 _P2_4	=	0x00a4
+                           0000A5   581 _P2_5	=	0x00a5
+                           0000A6   582 _P2_6	=	0x00a6
+                           0000A7   583 _P2_7	=	0x00a7
+                           0000A8   584 _RFERRIE	=	0x00a8
+                           0000A9   585 _ADCIE	=	0x00a9
+                           0000AA   586 _URX0IE	=	0x00aa
+                           0000AB   587 _URX1IE	=	0x00ab
+                           0000AC   588 _ENCIE	=	0x00ac
+                           0000AD   589 _STIE	=	0x00ad
+                           0000AF   590 _EA	=	0x00af
+                           0000B8   591 _DMAIE	=	0x00b8
+                           0000B9   592 _T1IE	=	0x00b9
+                           0000BA   593 _T2IE	=	0x00ba
+                           0000BB   594 _T3IE	=	0x00bb
+                           0000BC   595 _T4IE	=	0x00bc
+                           0000BD   596 _P0IE	=	0x00bd
+                           0000C0   597 _DMAIF	=	0x00c0
+                           0000C1   598 _T1IF	=	0x00c1
+                           0000C2   599 _T2IF	=	0x00c2
+                           0000C3   600 _T3IF	=	0x00c3
+                           0000C4   601 _T4IF	=	0x00c4
+                           0000C5   602 _P0IF	=	0x00c5
+                           0000C7   603 _STIF	=	0x00c7
+                           0000D0   604 _P	=	0x00d0
+                           0000D1   605 _F1	=	0x00d1
+                           0000D2   606 _OV	=	0x00d2
+                           0000D3   607 _RS0	=	0x00d3
+                           0000D4   608 _RS1	=	0x00d4
+                           0000D5   609 _F0	=	0x00d5
+                           0000D6   610 _AC	=	0x00d6
+                           0000D7   611 _CY	=	0x00d7
+                           0000D8   612 _T3OVFIF	=	0x00d8
+                           0000D9   613 _T3CH0IF	=	0x00d9
+                           0000DA   614 _T3CH1IF	=	0x00da
+                           0000DB   615 _T4OVFIF	=	0x00db
+                           0000DC   616 _T4CH0IF	=	0x00dc
+                           0000DD   617 _T4CH1IF	=	0x00dd
+                           0000DE   618 _OVFIM	=	0x00de
+                           0000E0   619 _ACC_0	=	0x00e0
+                           0000E1   620 _ACC_1	=	0x00e1
+                           0000E2   621 _ACC_2	=	0x00e2
+                           0000E3   622 _ACC_3	=	0x00e3
+                           0000E4   623 _ACC_4	=	0x00e4
+                           0000E5   624 _ACC_5	=	0x00e5
+                           0000E6   625 _ACC_6	=	0x00e6
+                           0000E7   626 _ACC_7	=	0x00e7
+                           0000E8   627 _P2IF	=	0x00e8
+                           0000E9   628 _UTX0IF	=	0x00e9
+                           0000EA   629 _UTX1IF	=	0x00ea
+                           0000EB   630 _P1IF	=	0x00eb
+                           0000EC   631 _WDTIF	=	0x00ec
+                           0000F0   632 _B_0	=	0x00f0
+                           0000F1   633 _B_1	=	0x00f1
+                           0000F2   634 _B_2	=	0x00f2
+                           0000F3   635 _B_3	=	0x00f3
+                           0000F4   636 _B_4	=	0x00f4
+                           0000F5   637 _B_5	=	0x00f5
+                           0000F6   638 _B_6	=	0x00f6
+                           0000F7   639 _B_7	=	0x00f7
+                           0000F8   640 _ACTIVE	=	0x00f8
+                           0000F9   641 _TX_BYTE	=	0x00f9
+                           0000FA   642 _RX_BYTE	=	0x00fa
+                           0000FB   643 _ERR	=	0x00fb
+                           0000FC   644 _FE	=	0x00fc
+                           0000FD   645 _SLAVE	=	0x00fd
+                           0000FE   646 _RE	=	0x00fe
+                           0000FF   647 _MODE	=	0x00ff
+                                    648 ;--------------------------------------------------------
+                                    649 ; overlayable register banks
+                                    650 ;--------------------------------------------------------
+                                    651 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        652 	.ds 8
+                                    653 ;--------------------------------------------------------
+                                    654 ; internal ram data
+                                    655 ;--------------------------------------------------------
+                                    656 	.area DSEG    (DATA)
+                                    657 ;--------------------------------------------------------
+                                    658 ; overlayable items in internal ram 
+                                    659 ;--------------------------------------------------------
+                                    660 ;--------------------------------------------------------
+                                    661 ; indirectly addressable internal ram data
+                                    662 ;--------------------------------------------------------
+                                    663 	.area ISEG    (DATA)
+                                    664 ;--------------------------------------------------------
+                                    665 ; absolute internal ram data
+                                    666 ;--------------------------------------------------------
+                                    667 	.area IABS    (ABS,DATA)
+                                    668 	.area IABS    (ABS,DATA)
+                                    669 ;--------------------------------------------------------
+                                    670 ; bit data
+                                    671 ;--------------------------------------------------------
+                                    672 	.area BSEG    (BIT)
+                                    673 ;--------------------------------------------------------
+                                    674 ; paged external ram data
+                                    675 ;--------------------------------------------------------
+                                    676 	.area PSEG    (PAG,XDATA)
+                                    677 ;--------------------------------------------------------
+                                    678 ; external ram data
+                                    679 ;--------------------------------------------------------
+                                    680 	.area XSEG    (XDATA)
+                           006230   681 _I2CCFG	=	0x6230
+                           006231   682 _I2CSTAT	=	0x6231
+                           006232   683 _I2CDATA	=	0x6232
+                           006233   684 _I2CADDR	=	0x6233
+                           006234   685 _I2CWC	=	0x6234
+                           006235   686 _I2CIO	=	0x6235
+                           006243   687 _OBSSEL0	=	0x6243
+                           006244   688 _OBSSEL1	=	0x6244
+                           006245   689 _OBSSEL2	=	0x6245
+                           006246   690 _OBSSEL3	=	0x6246
+                           006247   691 _OBSSEL4	=	0x6247
+                           006248   692 _OBSSEL5	=	0x6248
+                           006249   693 _CHVER	=	0x6249
+                           00624A   694 _CHIPID	=	0x624a
+                           00624B   695 _TESTREG0	=	0x624b
+                           006260   696 _DBGDATA	=	0x6260
+                           006262   697 _SRCRC	=	0x6262
+                           006264   698 _BATTMON	=	0x6264
+                           006265   699 _IVCTRL	=	0x6265
+                           006270   700 _FCTL	=	0x6270
+                           006271   701 _FADDRL	=	0x6271
+                           006272   702 _FADDRH	=	0x6272
+                           006273   703 _FWDATA	=	0x6273
+                           006276   704 _CHIPINFO0	=	0x6276
+                           006277   705 _CHIPINFO1	=	0x6277
+                           006281   706 _IRCTL	=	0x6281
+                           006290   707 _CLD	=	0x6290
+                           0062A0   708 _X_T1CCTL0	=	0x62a0
+                           0062A1   709 _X_T1CCTL1	=	0x62a1
+                           0062A2   710 _X_T1CCTL2	=	0x62a2
+                           0062A3   711 _T1CCTL3	=	0x62a3
+                           0062A4   712 _T1CCTL4	=	0x62a4
+                           0062A6   713 _X_T1CC0L	=	0x62a6
+                           0062A7   714 _X_T1CC0H	=	0x62a7
+                           0062A8   715 _X_T1CC1L	=	0x62a8
+                           0062A9   716 _X_T1CC1H	=	0x62a9
+                           0062AA   717 _X_T1CC2L	=	0x62aa
+                           0062AB   718 _X_T1CC2H	=	0x62ab
+                           0062AC   719 _T1CC3L	=	0x62ac
+                           0062AD   720 _T1CC3H	=	0x62ad
+                           0062AE   721 _T1CC4L	=	0x62ae
+                           0062AF   722 _T1CC4H	=	0x62af
+                           0062B0   723 _STCC	=	0x62b0
+                           0062B1   724 _STCS	=	0x62b1
+                           0062B2   725 _STCV0	=	0x62b2
+                           0062B3   726 _STCV1	=	0x62b3
+                           0062B4   727 _STCV2	=	0x62b4
+                           0062C0   728 _OPAMPC	=	0x62c0
+                           0062C1   729 _OPAMPS	=	0x62c1
+                           0062D0   730 _CMPCTL	=	0x62d0
+                           006200   731 _USBADDR	=	0x6200
+                           006201   732 _USBPOW	=	0x6201
+                           006202   733 _USBIIF	=	0x6202
+                           006204   734 _USBOIF	=	0x6204
+                           006206   735 _USBCIF	=	0x6206
+                           006207   736 _USBIIE	=	0x6207
+                           006209   737 _USBOIE	=	0x6209
+                           00620B   738 _USBCIE	=	0x620b
+                           00620C   739 _USBFRML	=	0x620c
+                           00620D   740 _USBFRMH	=	0x620d
+                           00620E   741 _USBINDEX	=	0x620e
+                           00620F   742 _USBCTRL	=	0x620f
+                           006210   743 _USBMAXI	=	0x6210
+                           006211   744 _USBCS0	=	0x6211
+                           006211   745 _USBCSIL	=	0x6211
+                           006212   746 _USBCSIH	=	0x6212
+                           006213   747 _USBMAXO	=	0x6213
+                           006214   748 _USBCSOL	=	0x6214
+                           006215   749 _USBCSOH	=	0x6215
+                           006216   750 _USBCNT0	=	0x6216
+                           006216   751 _USBCNTL	=	0x6216
+                           006217   752 _USBCNTH	=	0x6217
+                           006220   753 _USBF0	=	0x6220
+                           006222   754 _USBF1	=	0x6222
+                           006224   755 _USBF2	=	0x6224
+                           006226   756 _USBF3	=	0x6226
+                           006228   757 _USBF4	=	0x6228
+                           00622A   758 _USBF5	=	0x622a
+                           006174   759 _SHORTADDRH	=	0x6174
+                           006175   760 _SHORTADDRL	=	0x6175
+                           006172   761 _PANIDH	=	0x6172
+                           006173   762 _PANIDL	=	0x6173
+                           00616A   763 _IEEE_ADDR	=	0x616a
+                           006180   764 _FRMFILT0	=	0x6180
+                           006181   765 _FRMFILT1	=	0x6181
+                           006182   766 _SRCMATCH	=	0x6182
+                           006183   767 _SRCSHORTEN0	=	0x6183
+                           006184   768 _SRCSHORTEN1	=	0x6184
+                           006185   769 _SRCSHORTEN2	=	0x6185
+                           006186   770 _SRCEXTEN0	=	0x6186
+                           006187   771 _SRCEXTEN1	=	0x6187
+                           006188   772 _SRCEXTEN2	=	0x6188
+                           006189   773 _FRMCTRL0	=	0x6189
+                           00618A   774 _FRMCTRL1	=	0x618a
+                           00618B   775 _RXENABLE	=	0x618b
+                           00618C   776 _RXMASKSET	=	0x618c
+                           00618D   777 _RXMASKCLR	=	0x618d
+                           00618E   778 _FREQTUNE	=	0x618e
+                           00618F   779 _FREQCTRL	=	0x618f
+                           006190   780 _TXPOWER	=	0x6190
+                           006191   781 _TXCTRL	=	0x6191
+                           006192   782 _FSMSTAT0	=	0x6192
+                           006193   783 _FSMSTAT1	=	0x6193
+                           006194   784 _FIFOPCTRL	=	0x6194
+                           006195   785 _FSMCTRL	=	0x6195
+                           006196   786 _CCACTRL0	=	0x6196
+                           006197   787 _CCACTRL1	=	0x6197
+                           006198   788 _RSSI	=	0x6198
+                           006199   789 _RSSISTAT	=	0x6199
+                           00619A   790 _RXFIRST	=	0x619a
+                           00619B   791 _RXFIFOCNT	=	0x619b
+                           00619C   792 _TXFIFOCNT	=	0x619c
+                           00619D   793 _RXFIRST_PTR	=	0x619d
+                           00619E   794 _RXLAST_PTR	=	0x619e
+                           00619F   795 _RXP1_PTR	=	0x619f
+                           0061A1   796 _TXFIRST_PTR	=	0x61a1
+                           0061A2   797 _TXLAST_PTR	=	0x61a2
+                           0061A3   798 _RFIRQM0	=	0x61a3
+                           0061A4   799 _RFIRQM1	=	0x61a4
+                           0061A5   800 _RFERRM	=	0x61a5
+                           0061A6   801 _OPAMPMC	=	0x61a6
+                           0061A7   802 _RFRND	=	0x61a7
+                           0061A8   803 _MDMCTRL0	=	0x61a8
+                           0061A9   804 _MDMCTRL1	=	0x61a9
+                           0061AA   805 _FREQEST	=	0x61aa
+                           0061AB   806 _RXCTRL	=	0x61ab
+                           0061AC   807 _FSCTRL	=	0x61ac
+                           0061AE   808 _FSCAL1	=	0x61ae
+                           0061AF   809 _FSCAL2	=	0x61af
+                           0061B0   810 _FSCAL3	=	0x61b0
+                           0061B1   811 _AGCCTRL0	=	0x61b1
+                           0061B2   812 _AGCCTRL1	=	0x61b2
+                           0061B3   813 _AGCCTRL2	=	0x61b3
+                           0061B4   814 _AGCCTRL3	=	0x61b4
+                           0061B5   815 _ADCTEST0	=	0x61b5
+                           0061B6   816 _ADCTEST1	=	0x61b6
+                           0061B7   817 _ADCTEST2	=	0x61b7
+                           0061B8   818 _MDMTEST0	=	0x61b8
+                           0061B9   819 _MDMTEST1	=	0x61b9
+                           0061BA   820 _DACTEST0	=	0x61ba
+                           0061BB   821 _DACTEST1	=	0x61bb
+                           0061BC   822 _DACTEST2	=	0x61bc
+                           0061BD   823 _ATEST	=	0x61bd
+                           0061BE   824 _PTEST0	=	0x61be
+                           0061BF   825 _PTEST1	=	0x61bf
+                           0061C0   826 _CSPPROG0	=	0x61c0
+                           0061C1   827 _CSPPROG1	=	0x61c1
+                           0061C2   828 _CSPPROG2	=	0x61c2
+                           0061C3   829 _CSPPROG3	=	0x61c3
+                           0061C4   830 _CSPPROG4	=	0x61c4
+                           0061C5   831 _CSPPROG5	=	0x61c5
+                           0061C6   832 _CSPPROG6	=	0x61c6
+                           0061C7   833 _CSPPROG7	=	0x61c7
+                           0061C8   834 _CSPPROG8	=	0x61c8
+                           0061C9   835 _CSPPROG9	=	0x61c9
+                           0061CA   836 _CSPPROG10	=	0x61ca
+                           0061CB   837 _CSPPROG11	=	0x61cb
+                           0061CC   838 _CSPPROG12	=	0x61cc
+                           0061CD   839 _CSPPROG13	=	0x61cd
+                           0061CE   840 _CSPPROG14	=	0x61ce
+                           0061CF   841 _CSPPROG15	=	0x61cf
+                           0061D0   842 _CSPPROG16	=	0x61d0
+                           0061D1   843 _CSPPROG17	=	0x61d1
+                           0061D2   844 _CSPPROG18	=	0x61d2
+                           0061D3   845 _CSPPROG19	=	0x61d3
+                           0061D4   846 _CSPPROG20	=	0x61d4
+                           0061D5   847 _CSPPROG21	=	0x61d5
+                           0061D6   848 _CSPPROG22	=	0x61d6
+                           0061D7   849 _CSPPROG23	=	0x61d7
+                           0061E0   850 _CSPCTRL	=	0x61e0
+                           0061E1   851 _CSPSTAT	=	0x61e1
+                           0061E2   852 _CSPX	=	0x61e2
+                           0061E3   853 _CSPY	=	0x61e3
+                           0061E4   854 _CSPZ	=	0x61e4
+                           0061E5   855 _CSPT	=	0x61e5
+                           0061EB   856 _RFC_OBS_CTRL0	=	0x61eb
+                           0061EC   857 _RFC_OBS_CTRL1	=	0x61ec
+                           0061ED   858 _RFC_OBS_CTRL2	=	0x61ed
+                           0061FA   859 _TXFILTCFG	=	0x61fa
+      0003E7                        860 _simpleBLEPeripheral_TaskID:
+      0003E7                        861 	.ds 1
+      0003E8                        862 _gapProfileState:
+      0003E8                        863 	.ds 1
+      0003E9                        864 _attDeviceName:
+      0003E9                        865 	.ds 21
+      0003FE                        866 _simpleBLEPeripheral_PeripheralCBs:
+      0003FE                        867 	.ds 4
+      000402                        868 _SimpleBLEPeripheral_Init_task_id_1_351:
+      000402                        869 	.ds 1
+      000403                        870 _SimpleBLEPeripheral_Init_initial_advertising_enable_2_353:
+      000403                        871 	.ds 1
+      000404                        872 _peripheralStateNotificationCB_newState_1_361:
+      000404                        873 	.ds 1
+                                    874 ;--------------------------------------------------------
+                                    875 ; absolute external ram data
+                                    876 ;--------------------------------------------------------
+                                    877 	.area XABS    (ABS,XDATA)
+                                    878 ;--------------------------------------------------------
+                                    879 ; external initialized ram data
+                                    880 ;--------------------------------------------------------
+                                    881 	.area HOME    (CODE)
+                                    882 	.area GSINIT0 (CODE)
+                                    883 	.area GSINIT1 (CODE)
+                                    884 	.area GSINIT2 (CODE)
+                                    885 	.area GSINIT3 (CODE)
+                                    886 	.area GSINIT4 (CODE)
+                                    887 	.area GSINIT5 (CODE)
+                                    888 	.area GSINIT  (CODE)
+                                    889 	.area GSFINAL (CODE)
+                                    890 	.area CSEG    (CODE)
+                                    891 ;--------------------------------------------------------
+                                    892 ; global & static initialisations
+                                    893 ;--------------------------------------------------------
+                                    894 	.area HOME    (CODE)
+                                    895 	.area GSINIT  (CODE)
+                                    896 	.area GSFINAL (CODE)
+                                    897 	.area GSINIT  (CODE)
+                                    898 ;	./Source/simpleBLEPeripheral.c:143: static gaprole_States_t gapProfileState = GAPROLE_INIT;
+      00004D 90 03 E8         [24]  899 	mov	dptr,#_gapProfileState
+      000050 74 00            [12]  900 	mov	a,#0x00
+      000052 F0               [24]  901 	movx	@dptr,a
+                                    902 ;	./Source/simpleBLEPeripheral.c:208: static uint8 attDeviceName[GAP_DEVICE_NAME_LEN] = "BX-dddebug-node";
+      000053 90 03 E9         [24]  903 	mov	dptr,#_attDeviceName
+      000056 74 42            [12]  904 	mov	a,#0x42
+      000058 F0               [24]  905 	movx	@dptr,a
+      000059 90 03 EA         [24]  906 	mov	dptr,#(_attDeviceName + 0x0001)
+      00005C 74 58            [12]  907 	mov	a,#0x58
+      00005E F0               [24]  908 	movx	@dptr,a
+      00005F 90 03 EB         [24]  909 	mov	dptr,#(_attDeviceName + 0x0002)
+      000062 74 2D            [12]  910 	mov	a,#0x2D
+      000064 F0               [24]  911 	movx	@dptr,a
+      000065 90 03 EC         [24]  912 	mov	dptr,#(_attDeviceName + 0x0003)
+      000068 74 64            [12]  913 	mov	a,#0x64
+      00006A F0               [24]  914 	movx	@dptr,a
+      00006B 90 03 ED         [24]  915 	mov	dptr,#(_attDeviceName + 0x0004)
+      00006E F0               [24]  916 	movx	@dptr,a
+      00006F 90 03 EE         [24]  917 	mov	dptr,#(_attDeviceName + 0x0005)
+      000072 F0               [24]  918 	movx	@dptr,a
+      000073 90 03 EF         [24]  919 	mov	dptr,#(_attDeviceName + 0x0006)
+      000076 04               [12]  920 	inc	a
+      000077 F0               [24]  921 	movx	@dptr,a
+      000078 90 03 F0         [24]  922 	mov	dptr,#(_attDeviceName + 0x0007)
+      00007B 74 62            [12]  923 	mov	a,#0x62
+      00007D F0               [24]  924 	movx	@dptr,a
+      00007E 90 03 F1         [24]  925 	mov	dptr,#(_attDeviceName + 0x0008)
+      000081 74 75            [12]  926 	mov	a,#0x75
+      000083 F0               [24]  927 	movx	@dptr,a
+      000084 90 03 F2         [24]  928 	mov	dptr,#(_attDeviceName + 0x0009)
+      000087 74 67            [12]  929 	mov	a,#0x67
+      000089 F0               [24]  930 	movx	@dptr,a
+      00008A 90 03 F3         [24]  931 	mov	dptr,#(_attDeviceName + 0x000a)
+      00008D 74 2D            [12]  932 	mov	a,#0x2D
+      00008F F0               [24]  933 	movx	@dptr,a
+      000090 90 03 F4         [24]  934 	mov	dptr,#(_attDeviceName + 0x000b)
+      000093 74 6E            [12]  935 	mov	a,#0x6E
+      000095 F0               [24]  936 	movx	@dptr,a
+      000096 90 03 F5         [24]  937 	mov	dptr,#(_attDeviceName + 0x000c)
+      000099 04               [12]  938 	inc	a
+      00009A F0               [24]  939 	movx	@dptr,a
+      00009B 90 03 F6         [24]  940 	mov	dptr,#(_attDeviceName + 0x000d)
+      00009E 74 64            [12]  941 	mov	a,#0x64
+      0000A0 F0               [24]  942 	movx	@dptr,a
+      0000A1 90 03 F7         [24]  943 	mov	dptr,#(_attDeviceName + 0x000e)
+      0000A4 04               [12]  944 	inc	a
+      0000A5 F0               [24]  945 	movx	@dptr,a
+      0000A6 90 03 F8         [24]  946 	mov	dptr,#(_attDeviceName + 0x000f)
+      0000A9 74 00            [12]  947 	mov	a,#0x00
+      0000AB F0               [24]  948 	movx	@dptr,a
+                                    949 ;	./Source/simpleBLEPeripheral.c:235: static gapRolesCBs_t simpleBLEPeripheral_PeripheralCBs =
+      0000AC 90 03 FE         [24]  950 	mov	dptr,#_simpleBLEPeripheral_PeripheralCBs
+      0000AF 74 14            [12]  951 	mov	a,#_peripheralStateNotificationCB
+      0000B1 F0               [24]  952 	movx	@dptr,a
+      0000B2 74 1F            [12]  953 	mov	a,#(_peripheralStateNotificationCB >> 8)
+      0000B4 A3               [24]  954 	inc	dptr
+      0000B5 F0               [24]  955 	movx	@dptr,a
+      0000B6 90 04 00         [24]  956 	mov	dptr,#(_simpleBLEPeripheral_PeripheralCBs + 0x0002)
+      0000B9 74 00            [12]  957 	mov	a,#0x00
+      0000BB F0               [24]  958 	movx	@dptr,a
+      0000BC A3               [24]  959 	inc	dptr
+      0000BD F0               [24]  960 	movx	@dptr,a
+                                    961 ;--------------------------------------------------------
+                                    962 ; Home
+                                    963 ;--------------------------------------------------------
+                                    964 	.area HOME    (CODE)
+                                    965 	.area HOME    (CODE)
+                                    966 ;--------------------------------------------------------
+                                    967 ; code
+                                    968 ;--------------------------------------------------------
+                                    969 	.area CSEG    (CODE)
+                                    970 ;------------------------------------------------------------
+                                    971 ;Allocation info for local variables in function 'SimpleBLEPeripheral_Init'
+                                    972 ;------------------------------------------------------------
+                                    973 ;task_id                   Allocated with name '_SimpleBLEPeripheral_Init_task_id_1_351'
+                                    974 ;initial_advertising_enable Allocated with name '_SimpleBLEPeripheral_Init_initial_advertising_enable_2_353'
+                                    975 ;------------------------------------------------------------
+                                    976 ;	./Source/simpleBLEPeripheral.c:274: void SimpleBLEPeripheral_Init( uint8 task_id )
+                                    977 ;	-----------------------------------------
+                                    978 ;	 function SimpleBLEPeripheral_Init
+                                    979 ;	-----------------------------------------
+      001E20                        980 _SimpleBLEPeripheral_Init:
+                           000007   981 	ar7 = 0x07
+                           000006   982 	ar6 = 0x06
+                           000005   983 	ar5 = 0x05
+                           000004   984 	ar4 = 0x04
+                           000003   985 	ar3 = 0x03
+                           000002   986 	ar2 = 0x02
+                           000001   987 	ar1 = 0x01
+                           000000   988 	ar0 = 0x00
+      001E20 E5 82            [12]  989 	mov	a,dpl
+      001E22 90 04 02         [24]  990 	mov	dptr,#_SimpleBLEPeripheral_Init_task_id_1_351
+      001E25 F0               [24]  991 	movx	@dptr,a
+                                    992 ;	./Source/simpleBLEPeripheral.c:276: simpleBLEPeripheral_TaskID = task_id;
+      001E26 E0               [24]  993 	movx	a,@dptr
+      001E27 FF               [12]  994 	mov	r7,a
+      001E28 90 03 E7         [24]  995 	mov	dptr,#_simpleBLEPeripheral_TaskID
+      001E2B EF               [12]  996 	mov	a,r7
+      001E2C F0               [24]  997 	movx	@dptr,a
+                                    998 ;	./Source/simpleBLEPeripheral.c:287: uint8 initial_advertising_enable = TRUE;
+      001E2D 90 04 03         [24]  999 	mov	dptr,#_SimpleBLEPeripheral_Init_initial_advertising_enable_2_353
+      001E30 74 01            [12] 1000 	mov	a,#0x01
+      001E32 F0               [24] 1001 	movx	@dptr,a
+                                   1002 ;	./Source/simpleBLEPeripheral.c:305: GAPRole_SetParameter( GAPROLE_ADVERT_ENABLED, sizeof( uint8 ), &initial_advertising_enable );
+      001E33 90 11 4E         [24] 1003 	mov	dptr,#_GAPRole_SetParameter_PARM_2
+      001E36 F0               [24] 1004 	movx	@dptr,a
+      001E37 90 11 4F         [24] 1005 	mov	dptr,#_GAPRole_SetParameter_PARM_3
+      001E3A 74 03            [12] 1006 	mov	a,#_SimpleBLEPeripheral_Init_initial_advertising_enable_2_353
+      001E3C F0               [24] 1007 	movx	@dptr,a
+      001E3D 74 04            [12] 1008 	mov	a,#(_SimpleBLEPeripheral_Init_initial_advertising_enable_2_353 >> 8)
+      001E3F A3               [24] 1009 	inc	dptr
+      001E40 F0               [24] 1010 	movx	@dptr,a
+      001E41 74 00            [12] 1011 	mov	a,#0x00
+      001E43 A3               [24] 1012 	inc	dptr
+      001E44 F0               [24] 1013 	movx	@dptr,a
+      001E45 75 82 05         [24] 1014 	mov	dpl,#0x05
+      001E48 75 83 03         [24] 1015 	mov	dph,#0x03
+      001E4B 12 41 31         [24] 1016 	lcall	_GAPRole_SetParameter
+                                   1017 ;	./Source/simpleBLEPeripheral.c:350: BX_AddService( GATT_ALL_SERVICES );
+      001E4E 75 82 FF         [24] 1018 	mov	dpl,#0xFF
+      001E51 75 83 FF         [24] 1019 	mov	dph,#0xFF
+      001E54 75 F0 FF         [24] 1020 	mov	b,#0xFF
+      001E57 74 FF            [12] 1021 	mov	a,#0xFF
+      001E59 12 49 54         [24] 1022 	lcall	_BX_AddService
+                                   1023 ;	./Source/simpleBLEPeripheral.c:377: osal_set_event( simpleBLEPeripheral_TaskID, SBP_START_DEVICE_EVT );
+      001E5C 90 03 E7         [24] 1024 	mov	dptr,#_simpleBLEPeripheral_TaskID
+      001E5F E0               [24] 1025 	movx	a,@dptr
+      001E60 FF               [12] 1026 	mov	r7,a
+      001E61 90 03 C6         [24] 1027 	mov	dptr,#_osal_set_event_PARM_2
+      001E64 74 01            [12] 1028 	mov	a,#0x01
+      001E66 F0               [24] 1029 	movx	@dptr,a
+      001E67 74 00            [12] 1030 	mov	a,#0x00
+      001E69 A3               [24] 1031 	inc	dptr
+      001E6A F0               [24] 1032 	movx	@dptr,a
+      001E6B 8F 82            [24] 1033 	mov	dpl,r7
+      001E6D 12 19 84         [24] 1034 	lcall	_osal_set_event
+      001E70                       1035 00101$:
+      001E70 22               [24] 1036 	ret
+                                   1037 ;------------------------------------------------------------
+                                   1038 ;Allocation info for local variables in function 'SimpleBLEPeripheral_ProcessEvent'
+                                   1039 ;------------------------------------------------------------
+                                   1040 ;events                    Allocated to stack - _bp -4
+                                   1041 ;task_id                   Allocated to registers 
+                                   1042 ;------------------------------------------------------------
+                                   1043 ;	./Source/simpleBLEPeripheral.c:394: uint16 SimpleBLEPeripheral_ProcessEvent( uint8 task_id, uint16 events )__reentrant
+                                   1044 ;	-----------------------------------------
+                                   1045 ;	 function SimpleBLEPeripheral_ProcessEvent
+                                   1046 ;	-----------------------------------------
+      001E71                       1047 _SimpleBLEPeripheral_ProcessEvent:
+      001E71 C0 1D            [24] 1048 	push	_bp
+      001E73 85 81 1D         [24] 1049 	mov	_bp,sp
+                                   1050 ;	./Source/simpleBLEPeripheral.c:400: if ( events & SBP_START_DEVICE_EVT )
+      001E76 E5 1D            [12] 1051 	mov	a,_bp
+      001E78 24 FC            [12] 1052 	add	a,#0xfc
+      001E7A F8               [12] 1053 	mov	r0,a
+      001E7B E6               [12] 1054 	mov	a,@r0
+      001E7C 20 E0 03         [24] 1055 	jb	acc.0,00115$
+      001E7F 02 1E C5         [24] 1056 	ljmp	00102$
+      001E82                       1057 00115$:
+                                   1058 ;	./Source/simpleBLEPeripheral.c:403: GAPRole_StartDevice( &simpleBLEPeripheral_PeripheralCBs );
+      001E82 75 82 FE         [24] 1059 	mov	dpl,#_simpleBLEPeripheral_PeripheralCBs
+      001E85 75 83 03         [24] 1060 	mov	dph,#(_simpleBLEPeripheral_PeripheralCBs >> 8)
+      001E88 75 F0 00         [24] 1061 	mov	b,#0x00
+      001E8B 12 46 57         [24] 1062 	lcall	_GAPRole_StartDevice
+                                   1063 ;	./Source/simpleBLEPeripheral.c:409: osal_start_timerEx( simpleBLEPeripheral_TaskID, SBP_PERIODIC_EVT, SBP_PERIODIC_EVT_PERIOD );
+      001E8E 90 03 E7         [24] 1064 	mov	dptr,#_simpleBLEPeripheral_TaskID
+      001E91 E0               [24] 1065 	movx	a,@dptr
+      001E92 FF               [12] 1066 	mov	r7,a
+      001E93 90 10 38         [24] 1067 	mov	dptr,#_osal_start_timerEx_PARM_2
+      001E96 74 02            [12] 1068 	mov	a,#0x02
+      001E98 F0               [24] 1069 	movx	@dptr,a
+      001E99 74 00            [12] 1070 	mov	a,#0x00
+      001E9B A3               [24] 1071 	inc	dptr
+      001E9C F0               [24] 1072 	movx	@dptr,a
+      001E9D 90 10 3A         [24] 1073 	mov	dptr,#_osal_start_timerEx_PARM_3
+      001EA0 74 88            [12] 1074 	mov	a,#0x88
+      001EA2 F0               [24] 1075 	movx	@dptr,a
+      001EA3 74 13            [12] 1076 	mov	a,#0x13
+      001EA5 A3               [24] 1077 	inc	dptr
+      001EA6 F0               [24] 1078 	movx	@dptr,a
+      001EA7 74 00            [12] 1079 	mov	a,#0x00
+      001EA9 A3               [24] 1080 	inc	dptr
+      001EAA F0               [24] 1081 	movx	@dptr,a
+      001EAB A3               [24] 1082 	inc	dptr
+      001EAC F0               [24] 1083 	movx	@dptr,a
+      001EAD 8F 82            [24] 1084 	mov	dpl,r7
+      001EAF 12 27 00         [24] 1085 	lcall	_osal_start_timerEx
+                                   1086 ;	./Source/simpleBLEPeripheral.c:411: return ( events ^ SBP_START_DEVICE_EVT );
+      001EB2 E5 1D            [12] 1087 	mov	a,_bp
+      001EB4 24 FC            [12] 1088 	add	a,#0xfc
+      001EB6 F8               [12] 1089 	mov	r0,a
+      001EB7 74 01            [12] 1090 	mov	a,#0x01
+      001EB9 66               [12] 1091 	xrl	a,@r0
+      001EBA FE               [12] 1092 	mov	r6,a
+      001EBB 08               [12] 1093 	inc	r0
+      001EBC 86 07            [24] 1094 	mov	ar7,@r0
+      001EBE 8E 82            [24] 1095 	mov	dpl,r6
+      001EC0 8F 83            [24] 1096 	mov	dph,r7
+      001EC2 02 1F 11         [24] 1097 	ljmp	00107$
+      001EC5                       1098 00102$:
+                                   1099 ;	./Source/simpleBLEPeripheral.c:417: if ( events & SBP_PERIODIC_EVT )
+      001EC5 E5 1D            [12] 1100 	mov	a,_bp
+      001EC7 24 FC            [12] 1101 	add	a,#0xfc
+      001EC9 F8               [12] 1102 	mov	r0,a
+      001ECA E6               [12] 1103 	mov	a,@r0
+      001ECB 20 E1 03         [24] 1104 	jb	acc.1,00116$
+      001ECE 02 1F 0B         [24] 1105 	ljmp	00106$
+      001ED1                       1106 00116$:
+                                   1107 ;	./Source/simpleBLEPeripheral.c:422: osal_start_timerEx( simpleBLEPeripheral_TaskID, SBP_PERIODIC_EVT, SBP_PERIODIC_EVT_PERIOD );
+      001ED1 90 03 E7         [24] 1108 	mov	dptr,#_simpleBLEPeripheral_TaskID
+      001ED4 E0               [24] 1109 	movx	a,@dptr
+      001ED5 FF               [12] 1110 	mov	r7,a
+      001ED6 90 10 38         [24] 1111 	mov	dptr,#_osal_start_timerEx_PARM_2
+      001ED9 74 02            [12] 1112 	mov	a,#0x02
+      001EDB F0               [24] 1113 	movx	@dptr,a
+      001EDC 74 00            [12] 1114 	mov	a,#0x00
+      001EDE A3               [24] 1115 	inc	dptr
+      001EDF F0               [24] 1116 	movx	@dptr,a
+      001EE0 90 10 3A         [24] 1117 	mov	dptr,#_osal_start_timerEx_PARM_3
+      001EE3 74 88            [12] 1118 	mov	a,#0x88
+      001EE5 F0               [24] 1119 	movx	@dptr,a
+      001EE6 74 13            [12] 1120 	mov	a,#0x13
+      001EE8 A3               [24] 1121 	inc	dptr
+      001EE9 F0               [24] 1122 	movx	@dptr,a
+      001EEA 74 00            [12] 1123 	mov	a,#0x00
+      001EEC A3               [24] 1124 	inc	dptr
+      001EED F0               [24] 1125 	movx	@dptr,a
+      001EEE A3               [24] 1126 	inc	dptr
+      001EEF F0               [24] 1127 	movx	@dptr,a
+      001EF0 8F 82            [24] 1128 	mov	dpl,r7
+      001EF2 12 27 00         [24] 1129 	lcall	_osal_start_timerEx
+                                   1130 ;	./Source/simpleBLEPeripheral.c:426: performPeriodicTask();
+      001EF5 12 1F 5E         [24] 1131 	lcall	_performPeriodicTask
+                                   1132 ;	./Source/simpleBLEPeripheral.c:428: return (events ^ SBP_PERIODIC_EVT);
+      001EF8 E5 1D            [12] 1133 	mov	a,_bp
+      001EFA 24 FC            [12] 1134 	add	a,#0xfc
+      001EFC F8               [12] 1135 	mov	r0,a
+      001EFD 74 02            [12] 1136 	mov	a,#0x02
+      001EFF 66               [12] 1137 	xrl	a,@r0
+      001F00 FE               [12] 1138 	mov	r6,a
+      001F01 08               [12] 1139 	inc	r0
+      001F02 86 07            [24] 1140 	mov	ar7,@r0
+      001F04 8E 82            [24] 1141 	mov	dpl,r6
+      001F06 8F 83            [24] 1142 	mov	dph,r7
+      001F08 02 1F 11         [24] 1143 	ljmp	00107$
+      001F0B                       1144 00106$:
+                                   1145 ;	./Source/simpleBLEPeripheral.c:434: return 0;
+      001F0B 75 82 00         [24] 1146 	mov	dpl,#0x00
+      001F0E 75 83 00         [24] 1147 	mov	dph,#0x00
+      001F11                       1148 00107$:
+      001F11 D0 1D            [24] 1149 	pop	_bp
+      001F13 22               [24] 1150 	ret
+                                   1151 ;------------------------------------------------------------
+                                   1152 ;Allocation info for local variables in function 'peripheralStateNotificationCB'
+                                   1153 ;------------------------------------------------------------
+                                   1154 ;newState                  Allocated with name '_peripheralStateNotificationCB_newState_1_361'
+                                   1155 ;------------------------------------------------------------
+                                   1156 ;	./Source/simpleBLEPeripheral.c:448: static void peripheralStateNotificationCB( gaprole_States_t newState )
+                                   1157 ;	-----------------------------------------
+                                   1158 ;	 function peripheralStateNotificationCB
+                                   1159 ;	-----------------------------------------
+      001F14                       1160 _peripheralStateNotificationCB:
+      001F14 E5 82            [12] 1161 	mov	a,dpl
+      001F16 90 04 04         [24] 1162 	mov	dptr,#_peripheralStateNotificationCB_newState_1_361
+      001F19 F0               [24] 1163 	movx	@dptr,a
+                                   1164 ;	./Source/simpleBLEPeripheral.c:450: switch ( newState )
+      001F1A E0               [24] 1165 	movx	a,@dptr
+      001F1B FF               [12] 1166 	mov	r7,a
+      001F1C C3               [12] 1167 	clr	c
+      001F1D 74 06            [12] 1168 	mov	a,#0x06
+      001F1F 9F               [12] 1169 	subb	a,r7
+      001F20 50 03            [24] 1170 	jnc	00114$
+      001F22 02 1F 53         [24] 1171 	ljmp	00108$
+      001F25                       1172 00114$:
+      001F25 EF               [12] 1173 	mov	a,r7
+      001F26 2F               [12] 1174 	add	a,r7
+      001F27 2F               [12] 1175 	add	a,r7
+      001F28 90 1F 2C         [24] 1176 	mov	dptr,#00115$
+      001F2B 73               [24] 1177 	jmp	@a+dptr
+      001F2C                       1178 00115$:
+      001F2C 02 1F 53         [24] 1179 	ljmp	00107$
+      001F2F 02 1F 41         [24] 1180 	ljmp	00101$
+      001F32 02 1F 44         [24] 1181 	ljmp	00102$
+      001F35 02 1F 4A         [24] 1182 	ljmp	00104$
+      001F38 02 1F 4D         [24] 1183 	ljmp	00105$
+      001F3B 02 1F 47         [24] 1184 	ljmp	00103$
+      001F3E 02 1F 50         [24] 1185 	ljmp	00106$
+                                   1186 ;	./Source/simpleBLEPeripheral.c:452: case GAPROLE_STARTED:
+      001F41                       1187 00101$:
+                                   1188 ;	./Source/simpleBLEPeripheral.c:460: break;
+      001F41 02 1F 53         [24] 1189 	ljmp	00108$
+                                   1190 ;	./Source/simpleBLEPeripheral.c:462: case GAPROLE_ADVERTISING:
+      001F44                       1191 00102$:
+                                   1192 ;	./Source/simpleBLEPeripheral.c:468: break;
+      001F44 02 1F 53         [24] 1193 	ljmp	00108$
+                                   1194 ;	./Source/simpleBLEPeripheral.c:470: case GAPROLE_CONNECTED:
+      001F47                       1195 00103$:
+                                   1196 ;	./Source/simpleBLEPeripheral.c:476: break;
+      001F47 02 1F 53         [24] 1197 	ljmp	00108$
+                                   1198 ;	./Source/simpleBLEPeripheral.c:478: case GAPROLE_WAITING:
+      001F4A                       1199 00104$:
+                                   1200 ;	./Source/simpleBLEPeripheral.c:484: break;
+      001F4A 02 1F 53         [24] 1201 	ljmp	00108$
+                                   1202 ;	./Source/simpleBLEPeripheral.c:486: case GAPROLE_WAITING_AFTER_TIMEOUT:
+      001F4D                       1203 00105$:
+                                   1204 ;	./Source/simpleBLEPeripheral.c:492: break;
+      001F4D 02 1F 53         [24] 1205 	ljmp	00108$
+                                   1206 ;	./Source/simpleBLEPeripheral.c:494: case GAPROLE_ERROR:
+      001F50                       1207 00106$:
+                                   1208 ;	./Source/simpleBLEPeripheral.c:500: break;
+      001F50 02 1F 53         [24] 1209 	ljmp	00108$
+                                   1210 ;	./Source/simpleBLEPeripheral.c:502: default:
+      001F53                       1211 00107$:
+                                   1212 ;	./Source/simpleBLEPeripheral.c:510: }
+      001F53                       1213 00108$:
+                                   1214 ;	./Source/simpleBLEPeripheral.c:512: gapProfileState = newState;
+      001F53 90 04 04         [24] 1215 	mov	dptr,#_peripheralStateNotificationCB_newState_1_361
+      001F56 E0               [24] 1216 	movx	a,@dptr
+      001F57 FF               [12] 1217 	mov	r7,a
+      001F58 90 03 E8         [24] 1218 	mov	dptr,#_gapProfileState
+      001F5B EF               [12] 1219 	mov	a,r7
+      001F5C F0               [24] 1220 	movx	@dptr,a
+      001F5D                       1221 00109$:
+      001F5D 22               [24] 1222 	ret
+                                   1223 ;------------------------------------------------------------
+                                   1224 ;Allocation info for local variables in function 'performPeriodicTask'
+                                   1225 ;------------------------------------------------------------
+                                   1226 ;	./Source/simpleBLEPeripheral.c:532: static void performPeriodicTask( void )
+                                   1227 ;	-----------------------------------------
+                                   1228 ;	 function performPeriodicTask
+                                   1229 ;	-----------------------------------------
+      001F5E                       1230 _performPeriodicTask:
+                                   1231 ;	./Source/simpleBLEPeripheral.c:539: }
+      001F5E                       1232 00101$:
+      001F5E 22               [24] 1233 	ret
+                                   1234 	.area CSEG    (CODE)
+                                   1235 	.area CONST   (CODE)
+                                   1236 	.area CABS    (ABS,CODE)

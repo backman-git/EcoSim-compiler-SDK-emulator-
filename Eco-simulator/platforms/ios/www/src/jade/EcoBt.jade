@@ -1,0 +1,54 @@
+doctype html
+html 
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" ,content="width=device-width, initial-scale=1")
+		title Module
+		
+		link(rel="stylesheet" href="../themes/EcoSim.min.css")
+		link(rel="stylesheet" href="../themes/jquery.mobile.icons.min.css")
+		link(rel="stylesheet" href=".././system/jquery.mobile.structure-1.4.3.css")
+		link(rel="stylesheet" href="../css/EcoBt.css")
+		
+
+		
+		
+		
+	
+	body
+	
+
+		div( data-role='page' ,data-theme="a" )
+			script(src='../js/EcoBt.js')
+			script(src='../js/EcoBtInit.js')
+
+
+			div( data-role='header', data-theme="a" , data-fullscreen="true" )
+				h1 EcoBTSuper
+				a(herf="#" class="ui-btn-left") Options
+				div( data-role="navbar")
+					ul
+						li
+							a(onclick="resume()") Resume
+						li
+							a(onclick="pause()") Pause
+			div( data-role='content', data-theme="a" )
+
+
+				div(class='canvas')
+					img(class='module' )
+					div(id='yLED' ,class='yelloLED')
+					div(id='gLED' ,class='greenLED')
+					div(id='rLED' ,class='redLED')
+
+				
+
+		
+
+
+
+
+
+
+			
+			

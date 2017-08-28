@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>84EADCCA-6912-404F-A2FF-552BF427E270</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BX_ble</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AF8BE197F6BCD19F6D7623FE5DB75133D605E70E</key>
+		<string>https://github.com/backman-git/8051-simulator</string>
+		<key>C0FA32E4F5E72B9277F5C011D6CAD9A713B4D9A6</key>
+		<string>https://github.com/backman-git/cc2540Simulator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>work_place/ios_ble_framework/BX_ble/BX_ble.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AF8BE197F6BCD19F6D7623FE5DB75133D605E70E</key>
+		<string>../../../../..</string>
+		<key>C0FA32E4F5E72B9277F5C011D6CAD9A713B4D9A6</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/backman-git/8051-simulator</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AF8BE197F6BCD19F6D7623FE5DB75133D605E70E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0FA32E4F5E72B9277F5C011D6CAD9A713B4D9A6</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AF8BE197F6BCD19F6D7623FE5DB75133D605E70E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>8051-simulator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

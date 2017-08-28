@@ -1,0 +1,996 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT3                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  l_BSEG_BYTES                    
+C:   00000002  l_BSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_GSINIT4                       
+C:   00000007  l_OSEG                          
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   0000000A  l_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000021  l_SSEG                          
+C:   00000034  l_HOME                          
+C:   00000034  s_GSINIT0                       
+C:   00000037  s_GSINIT1                       
+C:   00000037  s_GSINIT2                       
+C:   0000003A  s_OSEG                          
+C:   00000041  s_GSINIT3                       
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000041  s_GSINIT4                       
+C:   00000041  s_SSEG                          
+C:   00000047  s_GSINIT                        
+C:   00000047  s_GSINIT5                       
+C:   00000058  l_DSEG                          
+C:   00000067  l_CONST                         
+C:   00000100  l_IRAM                          
+C:   00000300  s_PSEG                          
+C:   00000300  s_XSEG                          
+C:   00000370  l_GSINIT                        
+C:   000003B7  s_GSFINAL                       
+C:   000003BA  s_CSEG                          
+C:   00000F31  l_XSEG                          
+C:   00001231  s_XISEG                         
+C:   0000577C  l_CSEG                          
+C:   00005B36  s_CONST                         
+C:   00005B9D  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  _P0                                BXprof
+     00000080  _P0_0                              BXprof
+     00000081  _P0_1                              BXprof
+     00000081  _SP                                BXprof
+     00000082  _DPL0                              BXprof
+     00000082  _P0_2                              BXprof
+     00000083  _DPH0                              BXprof
+     00000083  _P0_3                              BXprof
+     00000084  _DPL1                              BXprof
+     00000084  _P0_4                              BXprof
+     00000085  _DPH1                              BXprof
+     00000085  _P0_5                              BXprof
+     00000086  _P0_6                              BXprof
+     00000086  _U0CSR                             BXprof
+     00000087  _P0_7                              BXprof
+     00000087  _PCON                              BXprof
+     00000088  _IT0                               BXprof
+     00000088  _TCON                              BXprof
+     00000089  _P0IFG                             BXprof
+     00000089  _RFERRIF                           BXprof
+     0000008A  _IT1                               BXprof
+     0000008A  _P1IFG                             BXprof
+     0000008B  _P2IFG                             BXprof
+     0000008B  _URX0IF                            BXprof
+     0000008C  _PICTL                             BXprof
+     0000008D  _ADCIF                             BXprof
+     0000008D  _P1IEN                             BXprof
+     0000008E  _BleFeedback                       gattservapp
+     0000008F  _P0INP                             BXprof
+     0000008F  _URX1IF                            BXprof
+     00000090  _P1                                BXprof
+     00000090  _P1_0                              BXprof
+     00000091  _P1_1                              BXprof
+     00000091  _RFIRQF1                           BXprof
+     00000092  _DPS                               BXprof
+     00000092  _P1_2                              BXprof
+     00000093  _MPAGE                             BXprof
+     00000093  _P1_3                              BXprof
+     00000093  __XPAGE                            BXprof
+     00000094  _P1_4                              BXprof
+     00000094  _T2CTRL                            BXprof
+     00000095  _P1_5                              BXprof
+     00000095  _ST0                               BXprof
+     00000096  _P1_6                              BXprof
+     00000096  _ST1                               BXprof
+     00000097  _P1_7                              BXprof
+     00000097  _ST2                               BXprof
+     00000098  _ENCIF_0                           BXprof
+     00000098  _S0CON                             BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000099  _ENCIF_1                           BXprof
+     0000009A  _IEN2                              BXprof
+     0000009B  _S1CON                             BXprof
+     0000009C  _T2EVTCFG                          BXprof
+     0000009D  _SLEEPSTA                          BXprof
+     0000009E  _CLKCONSTA                         BXprof
+     0000009F  _FMAP                              BXprof
+     0000009F  _PSBANK                            BXprof
+     000000A0  _P2                                BXprof
+     000000A0  _P2_0                              BXprof
+     000000A1  _P2_1                              BXprof
+     000000A1  _T2IRQF                            BXprof
+     000000A2  _P2_2                              BXprof
+     000000A2  _T2M0                              BXprof
+     000000A3  _P2_3                              BXprof
+     000000A3  _T2M1                              BXprof
+     000000A4  _P2_4                              BXprof
+     000000A4  _T2MOVF0                           BXprof
+     000000A5  _P2_5                              BXprof
+     000000A5  _T2MOVF1                           BXprof
+     000000A6  _P2_6                              BXprof
+     000000A6  _T2MOVF2                           BXprof
+     000000A7  _P2_7                              BXprof
+     000000A7  _T2IRQM                            BXprof
+     000000A8  _IEN0                              BXprof
+     000000A8  _RFERRIE                           BXprof
+     000000A9  _ADCIE                             BXprof
+     000000A9  _IP0                               BXprof
+     000000AA  _BleOpr                            gattservapp
+     000000AA  _URX0IE                            BXprof
+     000000AB  _P0IEN                             BXprof
+     000000AB  _URX1IE                            BXprof
+     000000AC  _ENCIE                             BXprof
+     000000AC  _P2IEN                             BXprof
+     000000AD  _STIE                              BXprof
+     000000AD  _STLOAD                            BXprof
+     000000AE  _PMUX                              BXprof
+     000000AF  _EA                                BXprof
+     000000AF  _T1STAT                            BXprof
+     000000B0  _ServNH                            gattservapp
+     000000B1  _ENCDI                             BXprof
+     000000B2  _ENCDO                             BXprof
+     000000B3  _ENCCS                             BXprof
+     000000B4  _ADCCON1                           BXprof
+     000000B5  _ADCCON2                           BXprof
+     000000B6  _ADCCON3                           BXprof
+     000000B7  _ServNL                            gattservapp
+     000000B8  _DMAIE                             BXprof
+     000000B8  _IEN1                              BXprof
+     000000B9  _IP1                               BXprof
+     000000B9  _T1IE                              BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000BA  _ADCL                              BXprof
+     000000BA  _T2IE                              BXprof
+     000000BB  _ADCH                              BXprof
+     000000BB  _T3IE                              BXprof
+     000000BC  _RNDL                              BXprof
+     000000BC  _T4IE                              BXprof
+     000000BD  _P0IE                              BXprof
+     000000BD  _RNDH                              BXprof
+     000000BE  _SLEEPCMD                          BXprof
+     000000BF  _RFERRF                            BXprof
+     000000C0  _DMAIF                             BXprof
+     000000C0  _FlashLed                          gattservapp
+     000000C0  _IRCON                             BXprof
+     000000C1  _T1IF                              BXprof
+     000000C1  _U0DBUF                            BXprof
+     000000C2  _MusicCtl                          gattservapp
+     000000C2  _T2IF                              BXprof
+     000000C2  _U0BAUD                            BXprof
+     000000C3  _T2MSEL                            BXprof
+     000000C3  _T3IF                              BXprof
+     000000C4  _T4IF                              BXprof
+     000000C4  _U0UCR                             BXprof
+     000000C5  _P0IF                              BXprof
+     000000C5  _U0GCR                             BXprof
+     000000C6  _CLKCONCMD                         BXprof
+     000000C7  _MEMCTR                            BXprof
+     000000C7  _STIF                              BXprof
+     000000C9  _WDCTL                             BXprof
+     000000CA  _T3CNT                             BXprof
+     000000CB  _T3CTL                             BXprof
+     000000CC  _T3CCTL0                           BXprof
+     000000CD  _T3CC0                             BXprof
+     000000CE  _T3CCTL1                           BXprof
+     000000CF  _T3CC1                             BXprof
+     000000D0  _P                                 BXprof
+     000000D0  _PSW                               BXprof
+     000000D1  _DMAIRQ                            BXprof
+     000000D1  _F1                                BXprof
+     000000D2  _DMA1CFGL                          BXprof
+     000000D2  _OV                                BXprof
+     000000D3  _DMA1CFGH                          BXprof
+     000000D3  _RS0                               BXprof
+     000000D4  _DMA0CFGL                          BXprof
+     000000D4  _RS1                               BXprof
+     000000D5  _DMA0CFGH                          BXprof
+     000000D5  _F0                                BXprof
+     000000D6  _AC                                BXprof
+     000000D6  _DMAARM                            BXprof
+     000000D7  _CY                                BXprof
+     000000D7  _DMAREQ                            BXprof
+     000000D8  _T3OVFIF                           BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000D8  _TIMIF                             BXprof
+     000000D9  _RFD                               BXprof
+     000000D9  _T3CH0IF                           BXprof
+     000000DA  _T1CC0L                            BXprof
+     000000DA  _T3CH1IF                           BXprof
+     000000DB  _T1CC0H                            BXprof
+     000000DB  _T4OVFIF                           BXprof
+     000000DC  _T1CC1L                            BXprof
+     000000DC  _T4CH0IF                           BXprof
+     000000DD  _T1CC1H                            BXprof
+     000000DD  _T4CH1IF                           BXprof
+     000000DE  _OVFIM                             BXprof
+     000000DE  _T1CC2L                            BXprof
+     000000DF  _T1CC2H                            BXprof
+     000000E0  _ACC                               BXprof
+     000000E0  _ACC_0                             BXprof
+     000000E1  _ACC_1                             BXprof
+     000000E1  _RFST                              BXprof
+     000000E2  _ACC_2                             BXprof
+     000000E2  _T1CNTL                            BXprof
+     000000E3  _ACC_3                             BXprof
+     000000E3  _T1CNTH                            BXprof
+     000000E4  _ACC_4                             BXprof
+     000000E4  _T1CTL                             BXprof
+     000000E5  _ACC_5                             BXprof
+     000000E5  _T1CCTL0                           BXprof
+     000000E6  _ACC_6                             BXprof
+     000000E6  _T1CCTL1                           BXprof
+     000000E7  _ACC_7                             BXprof
+     000000E7  _T1CCTL2                           BXprof
+     000000E8  _IRCON2                            BXprof
+     000000E8  _P2IF                              BXprof
+     000000E9  _RFIRQF0                           BXprof
+     000000E9  _UTX0IF                            BXprof
+     000000EA  _T4CNT                             BXprof
+     000000EA  _UTX1IF                            BXprof
+     000000EB  _P1IF                              BXprof
+     000000EB  _T4CTL                             BXprof
+     000000EC  _T4CCTL0                           BXprof
+     000000EC  _WDTIF                             BXprof
+     000000ED  _T4CC0                             BXprof
+     000000EE  _T4CCTL1                           BXprof
+     000000EF  _T4CC1                             BXprof
+     000000F0  _B                                 BXprof
+     000000F0  _B_0                               BXprof
+     000000F1  _B_1                               BXprof
+     000000F1  _PERCFG                            BXprof
+     000000F2  _APCFG                             BXprof
+     000000F2  _B_2                               BXprof
+     000000F3  _B_3                               BXprof
+     000000F3  _P0SEL                             BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000F4  _B_4                               BXprof
+     000000F4  _P1SEL                             BXprof
+     000000F5  _B_5                               _gptrget
+     000000F5  _P2SEL                             BXprof
+     000000F6  _B_6                               _gptrget
+     000000F6  _P1INP                             BXprof
+     000000F7  _B_7                               _gptrget
+     000000F7  _P2INP                             BXprof
+     000000F8  _ACTIVE                            BXprof
+     000000F8  _U1CSR                             BXprof
+     000000F9  _TX_BYTE                           BXprof
+     000000F9  _U1DBUF                            BXprof
+     000000FA  _RX_BYTE                           BXprof
+     000000FA  _U1BAUD                            BXprof
+     000000FB  _ERR                               BXprof
+     000000FB  _U1UCR                             BXprof
+     000000FC  _FE                                BXprof
+     000000FC  _U1GCR                             BXprof
+     000000FD  _P0DIR                             BXprof
+     000000FD  _SLAVE                             BXprof
+     000000FE  _P1DIR                             BXprof
+     000000FE  _RE                                BXprof
+     000000FF  _MODE                              BXprof
+     000000FF  _P2DIR                             BXprof
+     0000616A  _IEEE_ADDR                         BXprof
+     00006172  _PANIDH                            BXprof
+     00006173  _PANIDL                            BXprof
+     00006174  _SHORTADDRH                        BXprof
+     00006175  _SHORTADDRL                        BXprof
+     00006180  _FRMFILT0                          BXprof
+     00006181  _FRMFILT1                          BXprof
+     00006182  _SRCMATCH                          BXprof
+     00006183  _SRCSHORTEN0                       BXprof
+     00006184  _SRCSHORTEN1                       BXprof
+     00006185  _SRCSHORTEN2                       BXprof
+     00006186  _SRCEXTEN0                         BXprof
+     00006187  _SRCEXTEN1                         BXprof
+     00006188  _SRCEXTEN2                         BXprof
+     00006189  _FRMCTRL0                          BXprof
+     0000618A  _FRMCTRL1                          BXprof
+     0000618B  _RXENABLE                          BXprof
+     0000618C  _RXMASKSET                         BXprof
+     0000618D  _RXMASKCLR                         BXprof
+     0000618E  _FREQTUNE                          BXprof
+     0000618F  _FREQCTRL                          BXprof
+     00006190  _TXPOWER                           BXprof
+     00006191  _TXCTRL                            BXprof
+     00006192  _FSMSTAT0                          BXprof
+     00006193  _FSMSTAT1                          BXprof
+     00006194  _FIFOPCTRL                         BXprof
+     00006195  _FSMCTRL                           BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00006196  _CCACTRL0                          BXprof
+     00006197  _CCACTRL1                          BXprof
+     00006198  _RSSI                              BXprof
+     00006199  _RSSISTAT                          BXprof
+     0000619A  _RXFIRST                           BXprof
+     0000619B  _RXFIFOCNT                         BXprof
+     0000619C  _TXFIFOCNT                         BXprof
+     0000619D  _RXFIRST_PTR                       BXprof
+     0000619E  _RXLAST_PTR                        BXprof
+     0000619F  _RXP1_PTR                          BXprof
+     000061A1  _TXFIRST_PTR                       BXprof
+     000061A2  _TXLAST_PTR                        BXprof
+     000061A3  _RFIRQM0                           BXprof
+     000061A4  _RFIRQM1                           BXprof
+     000061A5  _RFERRM                            BXprof
+     000061A6  _OPAMPMC                           BXprof
+     000061A7  _RFRND                             BXprof
+     000061A8  _MDMCTRL0                          BXprof
+     000061A9  _MDMCTRL1                          BXprof
+     000061AA  _FREQEST                           BXprof
+     000061AB  _RXCTRL                            BXprof
+     000061AC  _FSCTRL                            BXprof
+     000061AE  _FSCAL1                            BXprof
+     000061AF  _FSCAL2                            BXprof
+     000061B0  _FSCAL3                            BXprof
+     000061B1  _AGCCTRL0                          BXprof
+     000061B2  _AGCCTRL1                          BXprof
+     000061B3  _AGCCTRL2                          BXprof
+     000061B4  _AGCCTRL3                          BXprof
+     000061B5  _ADCTEST0                          BXprof
+     000061B6  _ADCTEST1                          BXprof
+     000061B7  _ADCTEST2                          BXprof
+     000061B8  _MDMTEST0                          BXprof
+     000061B9  _MDMTEST1                          BXprof
+     000061BA  _DACTEST0                          BXprof
+     000061BB  _DACTEST1                          BXprof
+     000061BC  _DACTEST2                          BXprof
+     000061BD  _ATEST                             BXprof
+     000061BE  _PTEST0                            BXprof
+     000061BF  _PTEST1                            BXprof
+     000061C0  _CSPPROG0                          BXprof
+     000061C1  _CSPPROG1                          BXprof
+     000061C2  _CSPPROG2                          BXprof
+     000061C3  _CSPPROG3                          BXprof
+     000061C4  _CSPPROG4                          BXprof
+     000061C5  _CSPPROG5                          BXprof
+     000061C6  _CSPPROG6                          BXprof
+     000061C7  _CSPPROG7                          BXprof
+     000061C8  _CSPPROG8                          BXprof
+     000061C9  _CSPPROG9                          BXprof
+     000061CA  _CSPPROG10                         BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000061CB  _CSPPROG11                         BXprof
+     000061CC  _CSPPROG12                         BXprof
+     000061CD  _CSPPROG13                         BXprof
+     000061CE  _CSPPROG14                         BXprof
+     000061CF  _CSPPROG15                         BXprof
+     000061D0  _CSPPROG16                         BXprof
+     000061D1  _CSPPROG17                         BXprof
+     000061D2  _CSPPROG18                         BXprof
+     000061D3  _CSPPROG19                         BXprof
+     000061D4  _CSPPROG20                         BXprof
+     000061D5  _CSPPROG21                         BXprof
+     000061D6  _CSPPROG22                         BXprof
+     000061D7  _CSPPROG23                         BXprof
+     000061E0  _CSPCTRL                           BXprof
+     000061E1  _CSPSTAT                           BXprof
+     000061E2  _CSPX                              BXprof
+     000061E3  _CSPY                              BXprof
+     000061E4  _CSPZ                              BXprof
+     000061E5  _CSPT                              BXprof
+     000061EB  _RFC_OBS_CTRL0                     BXprof
+     000061EC  _RFC_OBS_CTRL1                     BXprof
+     000061ED  _RFC_OBS_CTRL2                     BXprof
+     000061FA  _TXFILTCFG                         BXprof
+     00006200  _USBADDR                           BXprof
+     00006201  _USBPOW                            BXprof
+     00006202  _USBIIF                            BXprof
+     00006204  _USBOIF                            BXprof
+     00006206  _USBCIF                            BXprof
+     00006207  _USBIIE                            BXprof
+     00006209  _USBOIE                            BXprof
+     0000620B  _USBCIE                            BXprof
+     0000620C  _USBFRML                           BXprof
+     0000620D  _USBFRMH                           BXprof
+     0000620E  _USBINDEX                          BXprof
+     0000620F  _USBCTRL                           BXprof
+     00006210  _USBMAXI                           BXprof
+     00006211  _USBCS0                            BXprof
+     00006211  _USBCSIL                           BXprof
+     00006212  _USBCSIH                           BXprof
+     00006213  _USBMAXO                           BXprof
+     00006214  _USBCSOL                           BXprof
+     00006215  _USBCSOH                           BXprof
+     00006216  _USBCNT0                           BXprof
+     00006216  _USBCNTL                           BXprof
+     00006217  _USBCNTH                           BXprof
+     00006220  _USBF0                             BXprof
+     00006222  _USBF1                             BXprof
+     00006224  _USBF2                             BXprof
+     00006226  _USBF3                             BXprof
+     00006228  _USBF4                             BXprof
+     0000622A  _USBF5                             BXprof
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00006230  _I2CCFG                            BXprof
+     00006231  _I2CSTAT                           BXprof
+     00006232  _I2CDATA                           BXprof
+     00006233  _I2CADDR                           BXprof
+     00006234  _I2CWC                             BXprof
+     00006235  _I2CIO                             BXprof
+     00006243  _OBSSEL0                           BXprof
+     00006244  _OBSSEL1                           BXprof
+     00006245  _OBSSEL2                           BXprof
+     00006246  _OBSSEL3                           BXprof
+     00006247  _OBSSEL4                           BXprof
+     00006248  _OBSSEL5                           BXprof
+     00006249  _CHVER                             BXprof
+     0000624A  _CHIPID                            BXprof
+     0000624B  _TESTREG0                          BXprof
+     00006260  _DBGDATA                           BXprof
+     00006262  _SRCRC                             BXprof
+     00006264  _BATTMON                           BXprof
+     00006265  _IVCTRL                            BXprof
+     00006270  _FCTL                              BXprof
+     00006271  _FADDRL                            BXprof
+     00006272  _FADDRH                            BXprof
+     00006273  _FWDATA                            BXprof
+     00006276  _CHIPINFO0                         BXprof
+     00006277  _CHIPINFO1                         BXprof
+     00006281  _IRCTL                             BXprof
+     00006290  _CLD                               BXprof
+     000062A0  _X_T1CCTL0                         BXprof
+     000062A1  _X_T1CCTL1                         BXprof
+     000062A2  _X_T1CCTL2                         BXprof
+     000062A3  _T1CCTL3                           BXprof
+     000062A4  _T1CCTL4                           BXprof
+     000062A6  _X_T1CC0L                          BXprof
+     000062A7  _X_T1CC0H                          BXprof
+     000062A8  _X_T1CC1L                          BXprof
+     000062A9  _X_T1CC1H                          BXprof
+     000062AA  _X_T1CC2L                          BXprof
+     000062AB  _X_T1CC2H                          BXprof
+     000062AC  _T1CC3L                            BXprof
+     000062AD  _T1CC3H                            BXprof
+     000062AE  _T1CC4L                            BXprof
+     000062AF  _T1CC4H                            BXprof
+     000062B0  _STCC                              BXprof
+     000062B1  _STCS                              BXprof
+     000062B2  _STCV0                             BXprof
+     000062B3  _STCV1                             BXprof
+     000062B4  _STCV2                             BXprof
+     000062C0  _OPAMPC                            BXprof
+     000062C1  _OPAMPS                            BXprof
+     000062D0  _CMPCTL                            BXprof
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000058 =          88. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000001D  _bp                                _bp
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                0000003A    00000007 =           7. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000041    00000021 =          33. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000041  __start__stack                     SimpleBLEPeripheral_Main
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+XSEG                                00000300    00000F31 =        3889. bytes (REL,CON,XDATA)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+D:   00000300  _osal_qHead                        OSAL
+D:   00000307  _osal_memcpy_PARM_2                OSAL
+D:   0000030A  _osal_memcpy_PARM_3                OSAL
+D:   00000315  _osal_revmemcpy_PARM_2             OSAL
+D:   00000318  _osal_revmemcpy_PARM_3             OSAL
+D:   00000323  _osal_memdup_PARM_2                OSAL
+D:   0000032B  _osal_memcmp_PARM_2                OSAL
+D:   0000032E  _osal_memcmp_PARM_3                OSAL
+D:   00000339  _osal_memset_PARM_2                OSAL
+D:   0000033A  _osal_memset_PARM_3                OSAL
+D:   00000342  _osal_build_uint32_PARM_2          OSAL
+D:   00000346  __ltoa_PARM_2                      OSAL
+D:   00000349  __ltoa_PARM_3                      OSAL
+D:   0000037B  _osal_msg_send_PARM_2              OSAL
+D:   0000037F  _osal_msg_push_front_PARM_2        OSAL
+D:   00000393  _osal_msg_find_PARM_2              OSAL
+D:   00000399  _osal_msg_enqueue_PARM_2           OSAL
+D:   000003AA  _osal_msg_push_PARM_2              OSAL
+D:   000003B0  _osal_msg_extract_PARM_2           OSAL
+D:   000003B3  _osal_msg_extract_PARM_3           OSAL
+D:   000003BA  _osal_msg_enqueue_max_PARM_2       OSAL
+D:   000003BD  _osal_msg_enqueue_max_PARM_3       OSAL
+D:   000003C6  _osal_set_event_PARM_2             OSAL
+D:   000003C9  _osal_clear_event_PARM_2           OSAL
+D:   000003CC  _osal_isr_register_PARM_2          OSAL
+D:   000003D3  _osal_buffer_uint32_PARM_2         OSAL
+D:   000003DA  _osal_buffer_uint24_PARM_2         OSAL
+D:   000003E1  _osal_isbufset_PARM_2              OSAL
+D:   000003E2  _osal_isbufset_PARM_3              OSAL
+D:   0000101B  _timerHead                         OSAL_Timers
+D:   00001022  _osalAddTimer_PARM_2               OSAL_Timers
+D:   00001024  _osalAddTimer_PARM_3               OSAL_Timers
+D:   0000102F  _osalFindTimer_PARM_2              OSAL_Timers
+D:   00001038  _osal_start_timerEx_PARM_2         OSAL_Timers
+D:   0000103A  _osal_start_timerEx_PARM_3         OSAL_Timers
+D:   0000103F  _osal_start_reload_timer_PARM_2    OSAL_Timers
+D:   00001041  _osal_start_reload_timer_PARM_3    OSAL_Timers
+D:   0000104A  _osal_stop_timerEx_PARM_2          OSAL_Timers
+D:   00001051  _osal_get_timeoutEx_PARM_2         OSAL_Timers
+D:   00001072  _tasksEvents                       OSAL_SimpleBLEPeripheral
+D:   0000107B  _OSAL_timeSeconds                  OSAL_ClockBLE
+D:   0000108B  _osal_ConvertUTCTime_PARM_2        OSAL_ClockBLE
+D:   000010BC  _GATT_FindUUIDRec_PARM_2           gatt_uuid
+D:   00001158  _GAPRole_SetParameter_PARM_2       peripheral
+D:   00001159  _GAPRole_SetParameter_PARM_3       peripheral
+D:   00001160  _GAPRole_GetParameter_PARM_2       peripheral
+D:   0000116A  _GAP_MakeDiscoverable_PARM_2       peripheral
+D:   0000116D  _GAP_UpdateAdvertisingData_PARM_   peripheral
+D:   0000116E  _GAP_UpdateAdvertisingData_PARM_   peripheral
+D:   0000116F  _GAP_UpdateAdvertisingData_PARM_   peripheral
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+XSEG                                00000300    00000F31 =        3889. bytes (REL,CON,XDATA)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+D:   000011DB  _GATTServApp_RegisterService_PAR   gattservapp
+D:   000011DD  _GATTServApp_RegisterService_PAR   gattservapp
+D:   000011E5  _accRead_PARM_2                    BX_ACC
+D:   000011E8  _accRead_PARM_3                    BX_ACC
+D:   000011EE  __divuint_PARM_2                   _divuint
+D:   000011F4  __modulong_PARM_2                  _modulong
+D:   000011FD  _strcpy_PARM_2                     _strcpy
+D:   00001203  __divulong_PARM_2                  _divulong
+D:   0000120F  _memset_PARM_2                     _memset
+D:   00001210  _memset_PARM_3                     _memset
+D:   00001212  __uitoa_PARM_2                     _itoa
+D:   00001215  __uitoa_PARM_3                     _itoa
+D:   00001219  __itoa_PARM_2                      _itoa
+D:   0000121C  __itoa_PARM_3                      _itoa
+D:   0000121F  _strcat_PARM_2                     _strcat
+D:   00001225  __gptrput_PARM_2                   _gptrput
+D:   00001226  __mulint_PARM_2                    _mulint
+D:   00001228  __mullong_PARM_2                   _mullong
+D:   0000122C  __moduint_PARM_2                   _moduint
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000034 =          52. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000003  __sdcc_program_startup             SimpleBLEPeripheral_Main
+C:   00000006  ___gptr_cmp                        
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000034    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000034  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000037    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000041    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000041  __mcs51_genRAMCLEAR                
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              00000047    00000370 =         880. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             000003B7    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000003BA    0000577C =       22396. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003BA  _main                              SimpleBLEPeripheral_Main
+C:   000003D3  _osal_strlen                       OSAL
+C:   00000400  _osal_memcpy                       OSAL
+C:   000004AE  _osal_revmemcpy                    OSAL
+C:   0000056B  _osal_memdup                       OSAL
+C:   000005EE  _osal_memcmp                       OSAL
+C:   0000068D  _osal_memset                       OSAL
+C:   000006D8  _osal_build_uint16                 OSAL
+C:   0000071F  _osal_build_uint32                 OSAL
+C:   00000915  __ltoa                             OSAL
+C:   00000E6B  _osal_rand                         OSAL
+C:   00000E6C  _osal_msg_allocate                 OSAL
+C:   00000F30  _osal_msg_deallocate               OSAL
+C:   00000FA1  _osal_msg_send                     OSAL
+C:   00000FCF  _osal_msg_push_front               OSAL
+C:   00001141  _osal_msg_receive                  OSAL
+C:   000012DE  _osal_msg_find                     OSAL
+C:   000013B3  _osal_msg_enqueue                  OSAL
+C:   00001525  _osal_msg_dequeue                  OSAL
+C:   00001627  _osal_msg_push                     OSAL
+C:   000016B6  _osal_msg_extract                  OSAL
+C:   000017F6  _osal_msg_enqueue_max              OSAL
+C:   00001962  _osal_set_event                    OSAL
+C:   000019C9  _osal_clear_event                  OSAL
+C:   00001A42  _osal_isr_register                 OSAL
+C:   00001A46  _osal_int_enable                   OSAL
+C:   00001A62  _osal_int_disable                  OSAL
+C:   00001A7E  _osal_init_system                  OSAL
+C:   00001A95  _osal_start_system                 OSAL
+C:   00001A9C  _osal_run_system                   OSAL
+C:   00001BB7  _osal_buffer_uint32                OSAL
+C:   00001CB2  _osal_buffer_uint24                OSAL
+C:   00001D78  _osal_isbufset                     OSAL
+C:   00001DF6  _osal_self                         OSAL
+C:   00001DFE  _SimpleBLEPeripheral_Init          simpleBLEPeripheral
+C:   00001E4F  _SimpleBLEPeripheral_ProcessEven   simpleBLEPeripheral
+C:   00001F3D  _osal_mem_init                     OSAL_Memory
+C:   00001F70  _osal_mem_kick                     OSAL_Memory
+C:   00001FB4  _osal_mem_alloc                    OSAL_Memory
+C:   00002300  _osal_mem_free                     OSAL_Memory
+C:   00002396  _osalTimerInit                     OSAL_Timers
+C:   000023A3  _osalAddTimer                      OSAL_Timers
+C:   000025CC  _osalFindTimer                     OSAL_Timers
+C:   00002699  _osalDeleteTimer                   OSAL_Timers
+C:   000026DE  _osal_start_timerEx                OSAL_Timers
+C:   00002732  _osal_start_reload_timer           OSAL_Timers
+C:   000027F0  _osal_stop_timerEx                 OSAL_Timers
+C:   0000286C  _osal_get_timeoutEx                OSAL_Timers
+C:   00002914  _osal_timer_num_active             OSAL_Timers
+C:   00002996  _osalTimerUpdate                   OSAL_Timers
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000003BA    0000577C =       22396. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00002FD0  _osal_GetSystemClock               OSAL_Timers
+C:   00002FE6  _osalInitTasks                     OSAL_SimpleBLEPeripheral
+C:   0000304A  _ll_McuPrecisionCount              OSAL_ClockBLE
+C:   00003061  _osalTimeUpdate                    OSAL_ClockBLE
+C:   0000323D  _osal_setClock                     OSAL_ClockBLE
+C:   0000326F  _osal_getClock                     OSAL_ClockBLE
+C:   00003285  _osal_ConvertUTCTime               OSAL_ClockBLE
+C:   000038A9  _osal_ConvertUTCSecs               OSAL_ClockBLE
+C:   00003BDB  _osillator                         epl_uart
+C:   00003BDF  _uartInit                          epl_uart
+C:   00003C5A  _uartWriteByte                     epl_uart
+C:   00003C7B  _uartReadByte                      epl_uart
+C:   00003CB2  _uartWriteString                   epl_uart
+C:   00003D15  _uartReadString                    epl_uart
+C:   00003D73  _uartWriteU16                      epl_uart
+C:   00003E36  _N_to_ascii                        epl_uart
+C:   00003E7E  _Task1_Init                        task1
+C:   00003EA3  _Task1_ProcessEvent                task1
+C:   00003F76  _Task2_Init                        task2
+C:   00003F93  _Task2_ProcessEvent                task2
+C:   00004069  _GATT_FindUUIDRec                  gatt_uuid
+C:   000042FA  _GAPRole_SetParameter              peripheral
+C:   000043E6  _GAPRole_GetParameter              peripheral
+C:   00004820  _GAPRole_StartDevice               peripheral
+C:   00004870  _GAPRole_Init                      peripheral
+C:   000048E2  _GAPRole_ProcessEvent              peripheral
+C:   00004AFA  _GAP_EndDiscoverable               peripheral
+C:   00004AFE  _GAP_MakeDiscoverable              peripheral
+C:   00004B19  _GAP_UpdateAdvertisingData         peripheral
+C:   00004B1D  _BX_AddService                     BXprof
+C:   00004EFE  _GATTServApp_Init                  gattservapp
+C:   00004F22  _GATTServApp_ProcessEvent          gattservapp
+C:   000052A9  _GATTServApp_RegisterService       gattservapp
+C:   00005356  _accInit                           BX_ACC
+C:   0000535D  _accRead                           BX_ACC
+C:   00005404  __divuint                          _divuint
+C:   0000549E  __modulong                         _modulong
+C:   000055DF  _strcpy                            _strcpy
+C:   00005638  __divulong                         _divulong
+C:   00005743  _memset                            _memset
+C:   0000576B  __uitoa                            _itoa
+C:   000058C0  __itoa                             _itoa
+C:   0000593C  _strcat                            _strcat
+C:   000059AA  __gptrput                          _gptrput
+C:   000059C5  __mulint                           _mulint
+C:   000059E5  __mullong                          _mullong
+C:   000059E5  __mullong_dummy                    _mullong
+C:   00005A51  __moduint                          _moduint
+C:   00005AFE  _strlen                            _strlen
+C:   00005B16  __gptrget                          _gptrget
+C:   00005B32  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00005B36    00000067 =         103. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00005B38  _tasksArr                          OSAL_SimpleBLEPeripheral
+C:   00005B42  _tasksCnt                          OSAL_SimpleBLEPeripheral
+C:   00005B43  _gapServiceUUID                    gatt_uuid
+C:   00005B45  _gattServiceUUID                   gatt_uuid
+C:   00005B47  _manufactServiceUUID               gatt_uuid
+C:   00005B49  _addressServiceUUID                gatt_uuid
+C:   00005B4B  _primaryServiceUUID                gatt_uuid
+C:   00005B4D  _secondaryServiceUUID              gatt_uuid
+C:   00005B4F  _includeUUID                       gatt_uuid
+C:   00005B51  _characterUUID                     gatt_uuid
+C:   00005B53  _charExtPropsUUID                  gatt_uuid
+C:   00005B55  _charUserDescUUID                  gatt_uuid
+C:   00005B57  _clientCharCfgUUID                 gatt_uuid
+C:   00005B59  _servCharCfgUUID                   gatt_uuid
+C:   00005B5B  _charFormatUUID                    gatt_uuid
+C:   00005B5D  _charAggFormatUUID                 gatt_uuid
+C:   00005B5F  _deviceNameUUID                    gatt_uuid
+C:   00005B61  _appearanceUUID                    gatt_uuid
+C:   00005B63  _periPrivacyFlagUUID               gatt_uuid
+C:   00005B65  _reconnectAddrUUID                 gatt_uuid
+C:   00005B67  _periConnParamUUID                 gatt_uuid
+C:   00005B69  _serviceChangedUUID                gatt_uuid
+C:   00005B6B  _manuNameUUID                      gatt_uuid
+C:   00005B6D  _serialNumUUID                     gatt_uuid
+C:   00005B6F  _manuAddrUUID                      gatt_uuid
+C:   00005B71  _validRangeUUID                    gatt_uuid
+C:   00005B73  _extReportRefUUID                  gatt_uuid
+C:   00005B75  _reportRefUUID                     gatt_uuid
+C:   00005B8D  _BX_CBs                            BXprof
+C:   00005B93  _BXServUUID                        BXprof
+C:   00005B95  _BXchar1UUID                       BXprof
+C:   00005B97  _BXchar2UUID                       BXprof
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+
+Files Linked                              [ module(s) ]
+
+SimpleBLEPeripheral_Main.rel              [  ]
+OSAL.rel                                  [  ]
+simpleBLEPeripheral.rel                   [  ]
+OSAL_Memory.rel                           [  ]
+OSAL_Timers.rel                           [  ]
+OSAL_SimpleBLEPeripheral.rel              [  ]
+OSAL_ClockBLE.rel                         [  ]
+epl_uart.rel                              [  ]
+task1.rel                                 [  ]
+task2.rel                                 [  ]
+gatt_uuid.rel                             [  ]
+peripheral.rel                            [  ]
+BXprof.rel                                [  ]
+gattservapp.rel                           [  ]
+BX_ACC.rel                                [  ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/local/bin/../share/sdcc/lib/large/libint.lib
+                                          [ _divuint.rel ]
+/usr/local/bin/../share/sdcc/lib/large/liblong.lib
+                                          [ _modulong.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _strcpy.rel ]
+/usr/local/bin/../share/sdcc/lib/large/liblong.lib
+                                          [ _divulong.rel ]
+/usr/local/bin/../share/sdcc/lib/large/mcs51.lib
+                                          [ crtclear.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _memset.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _itoa.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _strcat.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _gptrput.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libint.lib
+                                          [ _mulint.rel ]
+/usr/local/bin/../share/sdcc/lib/large/liblong.lib
+                                          [ _mullong.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libint.lib
+                                          [ _moduint.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _bp.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _strlen.rel ]
+/usr/local/bin/../share/sdcc/lib/large/mcs51.lib
+                                          [ gptr_cmp.rel ]
+/usr/local/bin/../share/sdcc/lib/large/mcs51.lib
+                                          [ crtstart.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _gptrget.rel ]
+/usr/local/bin/../share/sdcc/lib/large/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+
+User Base Address Definitions
+
+HOME = 0x0000
+DSEG = 0x0010
+XSEG = 0x0300
+PSEG = 0x0300
+ISEG = 0x0000
+BSEG = 0x0000
+
+

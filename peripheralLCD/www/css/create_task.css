@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+}
+.ui-content {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+}
+.marker_circle {
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+}
+.icon {
+  right: -10px;
+  margin: 0px auto;
+  height: 200pt;
+  width: 200pt;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+}
+.nav_bar {
+  margin: 0px auto;
+  height: 50px;
+  width: 290px;
+}

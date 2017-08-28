@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+}
+.canvas {
+  position: relative;
+  top: 0px;
+  left: 30px;
+  width: 250px;
+  height: 500px;
+}
+.module {
+  background: url(../img/EcoBTsuper.jpg);
+  height: 500px;
+  width: 225px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.yelloLED {
+  position: absolute;
+  top: 33px;
+  left: 145px;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 0, 0.8);
+  border-radius: 50%;
+}
+.greenLED {
+  position: absolute;
+  top: 48px;
+  left: 145px;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(0, 255, 0, 0.8);
+  border-radius: 50%;
+}
+.redLED {
+  position: absolute;
+  top: 15px;
+  left: 145px;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+}
